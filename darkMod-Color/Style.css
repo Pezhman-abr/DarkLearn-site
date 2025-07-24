@@ -1,0 +1,124 @@
+/* :root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --text-color: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="minimal"] {
+    --primary-color: #4f46e5;
+    --secondary-color: #6366f1;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+:root[data-theme="dark"] {
+    --primary-color: #0f172a;
+    --secondary-color: #1e293b;
+    --glass-bg: rgba(0, 0, 0, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.05);
+} */
+
+
+
+
+:root {
+
+    --Font1-color: #111827 ;
+    --Font2--color: #374151 ;
+    --Font3--color: #64748B ;
+    --FontHover--color : #1EB35B ;
+    --BodyBackground--Color : #e9e8e8bd ;
+    --Box--color : #ffff ;
+    --BoxSadow-color: #DDD;
+    --Titlehavar-color: #23bb598e ;
+    --Footer--bg-color : #FFF ;
+    --glass-background: rgba(255, 255, 255, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-hard: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --hover-glow: 0 0 15px rgba(99, 241, 187, 0.804), 0 0 30px rgba(99, 241, 187, 0.593);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --card-radius: 20px;
+    --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+    --blur-effect: blur(10px);
+
+    --Glass-bg--menu: rgba(21, 21, 21, 0.82);
+    --primary-gradient: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+    --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --text--hover-color : rgb(99, 241, 158);
+    --glass-bg: rgba(2, 2, 2, 0.266);
+
+
+}
+.dark{
+    --Font1-color: #FFF ;
+    --Font2--color: #9CA3AF ;
+    --Font3--color: #FFFFFFB3 ;
+    --FontHover--color : rgb(99, 102, 241) ;
+    --BodyBackground--Color : #111827 ;
+    --Box--color : rgb(36 42 56) ;
+    --BoxSadow-color : none ;
+    --Titlehavar-color: #056a28c0 ;
+    --Footer--bg-color : #242A38 ;
+    --hover-glow: 0 0 15px rgba(99, 102, 241, 0.7), 0 0 30px rgba(99, 102, 241, 0.5);
+    --text--hover-color : rgb(99, 102, 241);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+
+
+}
+
+                /* نرو های پس زمینه */
+
+.ameyzing{
+    position: absolute;
+    top: 3480px;
+    /* background-color: #eb17e1; */
+    width: 100%;
+    height: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: .2;
+    filter: blur(50px);
+    z-index: -1;
+}
+
+.LOGI{
+    filter: blur(90px);
+    top: 50%;
+}
+.cicle{
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 0px 33px 2px #FFF;
+    border-radius: 50%;
+}
+.LOGI-CIC{
+    width: 300px;
+    height: 300px;
+}
+.M{
+    background-color: #1EB35B;
+    position: relative;
+    top: -60px;
+}
+.F{
+    background-color: #9a0cff;
+    position: relative;
+    top: 60px;
+}
+
+.GG{
+    top: 0px;
+    background-color: #0aab53;
+
+}
+.LL{
+    top: -250px ;
+    background-color: #ffef0cc4;
+    left: 50px;
+
+}
+                /* ------  */

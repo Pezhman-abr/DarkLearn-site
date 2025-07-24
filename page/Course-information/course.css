@@ -1,0 +1,876 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box ;
+}
+                    /* heder-menu-course */
+
+
+/* course-Main */
+
+.courseMain{
+    height: -webkit-fill-available;
+
+}
+                    
+.cc-oo{
+    height: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.serche--course{
+    width: 210px;
+    height: 50px;
+    position: relative;
+    right: 417px;
+    /* display: flex; */
+
+    /* top: -69px; */
+}
+.sr-box-icone{
+    color: #FFF;
+    font-size: 18px;
+
+}
+.SR--COUR{
+    width: 209px;
+    height: 50px;
+    border-radius: 2.5rem;
+    border: none;
+    outline: none;
+    display: inline;
+    padding: 15px 29px 15px 0px;
+    margin-top: 40px;
+    font-size: 12px;
+    position: relative;
+    left: -0.5%;
+    top: -40px;
+    background-color: var(--Font1-color);
+    color: var(--text--hover-color);
+}
+.SR--COUR::placeholder{
+    color: #1EB35B;
+}
+.search-box-course{
+    display: none;
+    position: absolute;
+    background-color: var(--Box--color);
+    border-radius: 12px;
+    width: 300px;
+    height: 300px;
+    top: 80px;
+    left: -50px;
+    overflow: hidden;
+    z-index: 30;
+    box-shadow: 0px 0px 15px #1EB35B;
+    overflow-y: scroll;
+}
+.search-box-course::-webkit-scrollbar{
+    width: 14px; 
+ }
+ /* قسمت بک‌گراند اسکرول‌بار */
+ .search-box-course::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 15px 0;
+    border-radius: 10px;
+  }  
+  .search-box-course::-webkit-scrollbar-thumb {
+    background-color: #1EB35B;    /* رنگ نوار */
+    border-radius: 18px;        /* گرد بودنش */
+    border: 5px solid transparent; 
+    background-clip: content-box;
+  }
+
+
+.serch-icon{
+    right: 161px;
+    top: 25px;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: #1EB35B;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Just-Go-To-Top_icone{
+    position: relative;
+    left : -251px;
+    top: -27px;
+    
+}
+.Hed--icone, .fa-sun{
+    position: relative;
+    float: left;
+    font-size: 28px;
+    top: 29px;
+    margin-left: 20px;
+    color: #FFF;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+/* .mah{
+    left: -314px;
+}
+
+.sabad{
+    left: -167px;
+} */
+.course--header{
+    height: 130px;
+}
+
+    /* -------------------  body -------------------- */
+
+.Corse_page-body{
+    max-width: 1269px;
+    height: 1180px;
+    background-color: var(--BodyBackground--Color);
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+    /* -------------------  main -------------------- */
+
+.containerCC{
+    width: 100%;
+    height: 1000px;
+    /* background-color: #1EB35B; */
+}
+
+      /*--------------- breadcrumb --------- */
+
+.breadcrumb{
+    background-color: var(--Box--color);
+    width: 99%;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    direction: rtl;
+    padding: 10px;
+    position: relative;
+    right: 16px;
+    z-index: 1;
+
+}
+.breadcrumb-item{
+    position: relative;
+    color: var(--Font1-color);
+    /* padding: 3px 5px 0 20px; */
+    margin-left: 10px;
+    /* background-color: #1c1f26; */
+    width: 144px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.breadcrumb-item::after{
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: -18px;
+    width: 0;
+    height: 16%;
+    border-top: 20px solid var(--BodyBackground--Color);
+    border-bottom: 20px solid var(--BodyBackground--Color);
+    border-right: 10px solid var(--BodyBackground--Color);
+    transform: rotate(-35deg);
+    z-index: 1;
+}
+.breadcrumb-item::before{
+    content: '';
+    position: absolute;
+    top: -26px;
+    left: -17px;
+    width: 0;
+    height: 22%;
+    border-top: 20px solid var(--BodyBackground--Color);
+    border-bottom: 20px solid var(--BodyBackground--Color);
+    border-right: 10px solid var(--BodyBackground--Color);
+    transform: rotate(35deg);
+    z-index: 1;
+}
+.breadcrumb-item:last-child::after {
+    display: none; 
+}
+.breadcrumb-item:last-child::before {
+    display: none; 
+}
+
+.breadcrumb-item:first-child{
+    width: 34px;
+    color: var(--Font1-color);
+    padding-left: 16px;
+}
+.breadcrumb-item:last-child{
+    width: 307px;
+}
+/* .breadcrumb-item:last-child a{
+    position: relative;
+    right: -46px;
+} */
+
+.breadcrumb-item a{
+    text-decoration: none;
+    color: var(--Font1-color);
+    font-size: 16px;
+    padding-right: 15px;
+
+}
+
+/* ----------- Course Head ---------  */
+.cours-section{
+    width: 100%;
+    height: 350px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/* ------------ Course Banner ----------------- */
+.cours-banner{
+    width: 48%;
+    height: 100%;
+    overflow: hidden; 
+    /* background-image: url(/image/curss-Image/javsScript.webp); */
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+/* ----------- Course Info one box ------------ */
+.Cours-info{
+    width: 48%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+}
+.info--item{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.info-title{
+    font-size: 26px;
+    font-weight: 800;
+    position: relative;
+    top: -25px;
+    color: var(--Font1-color);
+}
+.info-Description{
+    color: var(--Font1-color);
+    font-size: 18px;
+    position: relative;
+    top: -20px;
+}
+
+/* ----------- Course Info two box ------------ */
+.cours-info-tow-box{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.info-btn{
+    width: 200px;
+    height: 50px;
+    background-color: #1EB35B;
+    color: #FFF;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+}
+.price-off{
+    font-size: 24px;
+    color: var(--Font3--color);
+    text-decoration: line-through;
+    font-weight: 700;
+}
+.cours-price{
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--Font1-color);
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+/* <!-- Course Box Info | Summary --> */
+
+.Summary{
+    position: relative;
+    top: 67px;
+    width: 67%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    right: 16px;
+}
+
+.Summary-item{
+    width: 259px;
+    height: 81px;
+    background-color: var(--Box--color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Summary-item i{
+    font-size: 39px;
+    color: #1EB35B;
+}
+.item--child{
+    width: 150px;
+    height: 77%;
+    position: relative;
+    left: 11px;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.IT-CH-F{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--Font1-color);
+}
+.IT-CH-L{
+    color: var(--Font3--color);
+    font-size: 14px;
+}
+
+/* ------------ aside -------- */
+aside{
+    width: 31%;
+    height: 689px;
+    /* background-color: #1EB35B; */
+    float: left;
+    position: relative;
+    top: -115px;
+    left: 13px;
+}
+/* <!-- Students & Rating & Progress --> */
+.progress{
+    width: 100%;
+    height: 184px;
+    background-color: var(--Box--color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.onePRO{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+.StudentsCourse{
+    width: 43%;
+    height: 59px;
+    background-color: var(--glass-bg);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.StudentsCourse i{
+    font-size: 30px;
+    color: #1EB35B;
+}
+.Stu--child{
+    width: 70px;
+    height: 60%;
+    position: relative;
+    left: 5px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: #1EB35B; */
+}
+.tedad-sabtNami{
+    color: var(--Font1-color);
+    font-size: 16px;
+    font-weight: 300;
+}
+.student_span{
+    color: var(--Font3--color);
+    font-weight: 200;
+}
+.Box-darsad{
+    width: 100%;
+    font-size: 18px;
+    color: var(--Font1-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    align-items: center;
+}
+.linePRO{
+    direction: ltr;
+    width: 90%;
+    height: 20px;
+    margin: 15px 15px;
+}
+
+/* <!-- Course Teacher --> */
+.coursTeacher{
+    width: 100%;
+    height: 260px;
+    background-color: var(--Box--color);
+    margin-top: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--Font1-color);
+}
+.fa-address-card{
+    font-size: 90px;
+    color: var(--Font1-color);
+}
+.teacherName{
+    font-size: 18px;
+    font-weight: 700;
+}
+.teacherAbout{
+    width: 90%;
+    text-align: center;
+}
+.teacher-Profile-btn{
+    color: #1EB35B;
+    background: none;
+    width: 140px;
+    height: 40px;
+    border: 2px solid #1EB35B;
+    border-radius: 8px;
+
+}
+
+/* <!-- Course Short Link --> */
+.corseLink{
+    width: 100%;
+    height: 150px;
+    background-color: var(--Box--color);
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+/* <!-- show more / show Less --> */
+.course-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background: var(--Box--color);
+    padding: 15px;
+    width: 820px;
+    max-height: 6200px;
+    margin: 0 15px;
+    border-radius: 14px;
+    /* transition: all 0.3s ease; */
+    position: relative;
+    top: -478px;
+    /* overflow: hidden; */
+  }
+  
+  .desc-container {
+    max-height: 700px; 
+    overflow: hidden;
+    /* transition: max-height 0.5s ease; */
+  }
+  /* .course-box {
+    max-height: 700px;
+  } */
+  .desc-container.expanded {
+    max-height: 3000px; 
+    /* height: 1000px; */
+    /* background-color: aqua; */
+  }
+  
+  .dichedBOX{
+    display: flex;
+    align-items: center;
+    color: var(--Font1-color);
+    height: 60px;
+    gap: 25px;
+    margin: 1px 5px;
+    /* font-size: 24px; */
+  }
+  .dichedBOX::before{
+    content: '';
+    width: 5px;
+    height: 35px;
+    background-color: #ff7c11;
+    position: absolute;
+    right: -5px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    z-index: -3;
+  }
+  .dec-btn{
+    position: relative;
+    right: 320px;
+    width: 120px;
+    height: 40px;
+    background-color: transparent;
+    color: #1EB35B;
+    border: 2px solid #1EB35B;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 30px;
+  }
+
+  .dec-para{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--Font1-color);
+  }
+  
+
+
+  /* .dec-btn{
+    position: relative;
+    top : -530px;
+    right: 300px;
+    width: 70px;
+    height: 40px;
+  } */
+
+  #description-image{
+    width: 790px;
+    margin: 20px auto;
+    height: 430px;
+    border-radius: 8px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/image/description-image/dec-php.webp);
+}
+
+
+/* course-info-footer */
+.course-info-footer{
+    width: 100%;
+    height: 560px;
+    background-color: var(--Box--color);
+    position: relative;
+    /* top: -440px; */
+}
+
+
+
+/* سبد خرید */
+
+
+.basket-product-container{
+    position: absolute;
+    left: 246px;
+    top: 15px;
+    z-index: 40;
+
+}
+
+.prudact-box{
+    width: 350px;
+    max-height: 480px;
+    /* height: 219px; */
+    background-color: #1EB35B;
+    box-shadow: 0px 0px 10px #000;
+    position: absolute;
+    left: -145px;
+    top: 101px;
+    border-radius: 10px;
+    z-index: 30;
+    display: none;
+    cursor: pointer;
+    overflow: hidden;
+    /* transition: height 0.3s ease; */
+
+}
+.empaty-basket{
+    position: relative;
+    right: -34%;
+    top: 33px;
+    height: 30px;
+    color: var(--Font1-color);
+}
+
+
+ /* ////////// */
+ .oneBasketBox{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #619af5b8;
+
+ }
+
+ .prudakt-buy-user{
+    direction: ltr;
+    /* text-align: right; */
+    background-color: #FFF;
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-between;
+
+
+ }
+ .prudakt-buy-user::-webkit-scrollbar{
+    width: 14px; 
+ }
+ /* قسمت بک‌گراند اسکرول‌بار */
+ .prudakt-buy-user::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 15px 0;
+    border-radius: 10px;
+  }  
+ .prudakt-buy-user::-webkit-scrollbar-thumb {
+    background-color: #1EB35B;    /* رنگ نوار */
+    border-radius: 18px;        /* گرد بودنش */
+    border: 5px solid transparent; 
+    background-clip: content-box;
+  }
+.prudact-img{
+    width: 120px;
+    height: 60px;
+    /* background-color: orange; */
+    /* background-image: url(/image/curss-Image/API-PHP.webp); */
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.pro-list-basket{
+    width: 100%;
+}
+.pro-list-basket li{
+    /* width: 100%; */
+    /* background-color: rebeccapurple; */
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 10px;
+}
+
+.name-price{
+    /* direction: ltr; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 60px;
+    /* background-color: red; */
+    width: 145px;
+    font-size: 12px;
+    text-align: right;
+}
+.show-price{
+    /* color: red; */
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    direction: rtl;
+
+}
+.prudact-ent-Box{
+    background-color: #fff;
+    height: 131px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.prudact-ent-Box::before{
+    content: '';
+    width: 92%;
+    height: 2px;
+    background-color: #c8c8c8;
+    border-radius: 20px ;
+    
+}
+.buy--allPrice-prudact{
+    width: 300px;
+    box-shadow: 0px 0px 15px #000;
+    padding: 15px;
+    background-color: #1EB35B;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+}
+.total-price-style{
+    /* background-color: red; */
+    color: var(--Font1-color);
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* <!-- وقتی سبد خرید کلیک میشه کل صفحه تار میشه --> */
+
+
+.overlay {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 450vh;
+    background-color: rgba(0,0,0,0.5); /* تیرگی پس‌زمینه */
+    z-index: 30; /* بالاتر از محتوای صفحه */
+    display: none; /* اول مخفیه */
+    backdrop-filter: blur(4px); /* اختیاری: محو کردن محتوا */
+  }
+  
+  .show-overlay {
+    display: block;
+  }
+
+  /* <!-- -------------------------------------------- --> */
+
+  .darklearn-about-title{
+    position: relative;
+    top: 50px;
+
+  }
+  .about-darklearn{
+    position: relative;
+    top: 56px;
+    font-size: 18px;
+
+  }
+
+  @media (max-width: 768px) {
+    .cc-oo,
+    .cours-section,
+    .Cours-info,
+    .cours-info-tow-box,
+    .Summary,
+    .course-box,
+    aside {
+      flex-direction: column;
+      width: 100% !important;
+      height: auto !important;
+      gap: 15px;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  
+    .serche--course,
+    .SR--COUR,
+    .info-btn,
+    .breadcrumb,
+    .breadcrumb-item,
+    .Summary-item,
+    .search-box-course {
+      width: 90% !important;
+      margin: 10px auto !important;
+      left: 0 !important;
+      right: 0 !important;
+    }
+  
+    .cours-banner {
+      width: 90% !important;
+      height: 200px !important;
+      background-size: cover !important;
+      background-position: center !important;
+    }
+  
+    .breadcrumb {
+      flex-wrap: wrap !important;
+      height: auto !important;
+    }
+  
+    .breadcrumb-item::after,
+    .breadcrumb-item::before {
+      display: none !important;
+    }
+  
+    #description-image {
+      width: 100% !important;
+      height: auto !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+    }
+  
+    .course-box {
+      width: 95% !important;
+      top: 0 !important;
+    }
+  
+    .dec-btn {
+      right: 0 !important;
+      margin: 20px auto !important;
+      display: block !important;
+    }
+  
+    .cours-price,
+    .price-off {
+      font-size: 20px !important;
+    }
+  
+    .prudact-box,
+    .prudakt-buy-user,
+    .buy--allPrice-prudact {
+      width: 90% !important;
+      left: 0 !important;
+      right: 0 !important;
+    }
+  
+    .prudact-img {
+      width: 100px !important;
+      height: 50px !important;
+    }
+  
+    .StudentsCourse {
+      width: 90% !important;
+    }
+  
+    .course-info-footer {
+      height: auto !important;
+    }
+  
+    aside {
+      float: none !important;
+      position: relative !important;
+      top: 0 !important;
+      left: 0 !important;
+      margin: 20px auto !important;
+    }
+  }
+  

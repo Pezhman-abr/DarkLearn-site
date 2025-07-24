@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/page/Course-information/course.css" />
+    <link rel="stylesheet" href="/page/home-page/css/style.css" />
+    <link rel="stylesheet" href="/darkMod-Color/Style.css" />
+    <link rel="stylesheet" href="/fontawesome-free-6.7.2-web/css/all.css" />
+    <script src="/page/acourseAbject.js"></script>
+  </head>
+  <body class="Corse_page-body">
+    <!-- وقتی سبد خرید کلیک میشه کل صفحه تار میشه -->
+
+    <div id="overlay" class="overlay"></div>
+
+    <div class="basket-product-container">
+      <i id="backetIcon" class="fa-solid fa-bag-shopping Hed--icone sabad"></i>
+      <!-- <i id="backetIcon" class="fa-solid fa-bag-shopping"></i> -->
+      <div class="prudact-box" id="icone-shope">
+        <!-- باکس اول سبد خرید\ -->
+        <div class="oneBasketBox">
+          <span>سبد خرید من</span>
+          <div>
+            <span id="basketItemCount">۰</span>
+            <span>دوره</span>
+          </div>
+        </div>
+        <!-- باکس نشان دادن دوره های که کاربر قصد خرید داشته -->
+        <div class="prudakt-buy-user" id="basketBox"></div>
+        <!-- باکس محاسبه هزینه تمام دوره ها و دکمه پرداخت -->
+        <div class="prudact-ent-Box">
+          <div class="total-price-style">
+            <span>مبلغ قابل پرداخت:</span>
+            <span id="totalPrice"></span>
+          </div>
+          <div>
+            <button class="buy--allPrice-prudact">پرداخت</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------------------- -->
+
+    <header class="course--header">
+      <div class="Menu--Bar cc-oo">
+        <img class="logo" src="/image/Group 2.png" alt="Dark Learn" />
+
+        <ul class="menu">
+          <a href="/page/home.html"><li>صفحه اصلی</li></a>
+          <a href="/page/AllCourse.html">
+            <li>همه دوره ها</li>
+          </a>
+          <li>مقالات</li>
+        </ul>
+        <div class="serche--course">
+          <input
+            id="searchInput"
+            class="SR--COUR"
+            type="search"
+            placeholder="جستوجو در بین دوره ها ..."
+          />
+          <div class="search-box-course" id="results"></div>
+          <div class="serch-icon">
+            <i class="fa-solid fa-magnifying-glass sr-box-icone"></i>
+          </div>
+        </div>
+        <div class="Just-Go-To-Top_icone">
+          <i id="toggle-theme" class="fa-solid fa-moon Hed--icone mah"></i>
+        </div>
+        <a href="/page/singin-login-page/LOGIN/login.html"
+          ><button class="login-btn">
+            <i class="fa-regular fa-user"></i>ورود | عضویت
+          </button></a
+        >
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="courseMain">
+      <div class="containerCC">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <div class="breadcrumb-item">
+            <a href="/page/home.html" class="breadcrumb__link"
+              ><i style="color: var(--Font1-color)" class="fa-solid fa-home"></i
+            ></a>
+          </div>
+          <div class="breadcrumb-item">
+            <a id="Breadcrumb-daste" href="#"></a>
+          </div>
+          <div class="breadcrumb-item">
+            <a id="Breadcrumb-Name" href="#"></a>
+          </div>
+          <div class="breadcrumb-item">
+            <a id="course-name" href="#"></a>
+          </div>
+        </div>
+        <!-- Course Head -->
+        <section class="cours-section">
+          <!-- Course Info one box -->
+          <div class="Cours-info">
+            <div class="info--item" id="course-info-box">
+              <!-- <h1 class="info-title">آموزش جامع PHP از صفر + پروژه محور</h1>  -->
+              <!-- <p class="info-Description">دوره آموزش PHP یک برنامه جامع و کاربردیست و برای افرادی طراحی شده که میخواهند مهارت‌های خود را در زمینه برنامه‌نویسی با زبان PHP به سطح حرفه‌ای برسانند و وارد بازارکار شوند.</p> -->
+            </div>
+
+            <!-- Course Info two box -->
+            <div class="cours-info-tow-box">
+              <button id="addToCartBtn" class="info-btn">
+                افزودن یه سبد خرید
+              </button>
+              <div>
+                <span class="price-off"></span>
+                <span class="cours-price"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Course Banner -->
+          <div class="cours-banner" id="banner">
+            <!-- <div class="cours-banner" style="background-image: url(/image/curss-Image/php.webp);"></div> -->
+          </div>
+        </section>
+
+        <section style="height: 267px">
+          <!-- article -->
+          <div>
+            <!-- Course Box Info | Summary -->
+            <div class="Summary">
+              <div class="Summary-item">
+                <i class="fas fa-circle-info"></i>
+                <div class="item--child">
+                  <span class="IT-CH-F">وضعیت دوره</span>
+                  <span id="Course-Status" class="IT-CH-L"></span>
+                </div>
+              </div>
+              <div class="Summary-item">
+                <i class="fas fa-clock"></i>
+                <div class="item--child">
+                  <span class="IT-CH-F">مدت زمان دوره</span>
+                  <span id="Course-duration" class="IT-CH-L"></span>
+                </div>
+              </div>
+              <div class="Summary-item">
+                <i class="fa-solid fa-calendar-days"></i>
+                <div class="item--child">
+                  <span class="IT-CH-F">آحرین بروزرسانی</span>
+                  <span id="apdate-Data" class="IT-CH-L"></span>
+                </div>
+              </div>
+              <div class="Summary-item">
+                <i class="fas fa-users"></i>
+                <div class="item--child">
+                  <span class="IT-CH-F">روش پشتیبانی</span>
+                  <span id="how-support" class="IT-CH-L"></span>
+                </div>
+              </div>
+              <div class="Summary-item">
+                <i class="fas fa-briefcase"></i>
+                <div class="item--child">
+                  <span class="IT-CH-F">پیش نیاز</span>
+                  <span id="course-prerequisite" class="IT-CH-L"></span>
+                </div>
+              </div>
+              <div class="Summary-item">
+                <i class="fas fa-video"></i>
+                <div class="item--child">
+                  <span class="IT-CH-F">نوع مشاهده</span>
+                  <span id="course-viwe-type" class="IT-CH-L"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside>
+            <!-- Students & Rating & Progress -->
+            <div class="progress">
+              <div class="onePRO">
+                <div class="StudentsCourse">
+                  <i class="fas fa-users"></i>
+                  <div class="Stu--child">
+                    <span id="student" class="tedad-sabtNami"></span>
+                    <span class="student_span">دانشجو</span>
+                  </div>
+                </div>
+                <div class="StudentsCourse">
+                  <i class="fas fa-star" style="color: yellow"></i>
+                  <div class="Stu--child">
+                    <span id="satisfaction" class="tedad-sabtNami"></span>
+                    <span class="student_span">رضایت</span>
+                  </div>
+                </div>
+              </div>
+              <div class="twoPRO">
+                <div class="Box-darsad">
+                  <span>درصد تکمیل دوره</span>
+                  <span id="Progress"></span>
+                </div>
+                <progress
+                  id="progComplate"
+                  class="linePRO"
+                  value="36"
+                  max="100"
+                ></progress>
+              </div>
+            </div>
+            <!-- Course Teacher -->
+            <div class="coursTeacher">
+              <i class="fa-regular fa-address-card"></i>
+              <span id="teacherName" class="teacherName"></span>
+              <span id="About-Teacher" class="teacherAbout"></span>
+              <button class="teacher-Profile-btn">مشاهده پروفایل</button>
+            </div>
+            <!-- Course Short Link -->
+            <div class="corseLink"></div>
+          </aside>
+        </section>
+      </div>
+    </main>
+    <!-- show more / show Less -->
+
+    <div class="course-box">
+      <div class="dichedBOX">
+        <i
+          class="fas fa-book"
+          style="color: rgb(255, 132, 0); font-size: 34px"
+        ></i>
+        <h3 style="font-size: 24px">توضیحات</h3>
+      </div>
+      <div class="desc-container">
+        <div id="description-image"></div>
+        <div class="dec-para">
+          <h3 id="dec-title"></h3>
+          <p id="paragraph1" class="desc"></p>
+          <p id="paragraph2"></p>
+          <h3 id="dec-title1"></h3>
+          <p id="paragraph3"></p>
+          <p id="paragraph4"></p>
+        </div>
+      </div>
+      <button class="dec-btn" onclick="toggleDesc(this)">بیشتر</button>
+    </div>
+
+    <footer class="footerHome">
+      <div class="hedFooter">
+        <div class="LOGO_and_SOsyal">
+          <div class="logo-and-name">
+            <img src="/image/Group 2.png" alt="Dark Learn" />
+            <span class="footer-site-name">دارک لرن</span>
+          </div>
+          <div class="sooyalDIV">
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </div>
+        <div class="contentSIte">
+          <div>
+            <a href="#"><i class="fa-solid fa-phone"></i>09121001212 </a>
+          </div>
+          <div>
+            <a href="#"
+              ><i class="fa-solid fa-envelope"></i>info@darklearn.ir</a
+            >
+          </div>
+          <div>
+            <a href="#"
+              ><i class="fa-brands fa-telegram"></i> @darklearn_support
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer2Content">
+        <div style="width: 430px">
+          <span
+            style="
+              font-size: 22px;
+              font-weight: 800;
+              color: var(--Font1-color);
+              margin-right: 10px;
+              position: relative;
+              top: 50px;
+            "
+            >درباره دارک لرن</span
+          ><br />
+          <span
+            style="
+              color: var(--Font3--color);
+              position: relative;
+              top: 70px;
+              right: 10px;
+            "
+            >شروع هرچیزی سخته، ولی وقتی مسیر درستی رو انتخاب کنی،با خیال راحت و
+            بدون استرس میتونی از مسیر لذت ببری. ما در دارک لرن، توی سفر به دنیای
+            برنامه نویسی کنارت هستیم تا باهم رشد کنیم و از نتیجه زحمات مون لذت
+            ببریم.</span
+          >
+        </div>
+        <div>
+          <span
+            style="
+              color: var(--Font1-color);
+              font-size: 22px;
+              font-weight: 800;
+              margin-right: 120px;
+              position: relative;
+              top: 50px;
+            "
+            >دوره های پرطرفدار</span
+          >
+          <a
+            style="
+              display: block;
+              margin-top: 20px;
+              font-size: 18px;
+              color: var(--Font3--color);
+              text-decoration: none;
+              position: relative;
+              top: 50px;
+              right: 120px;
+            "
+            href="#"
+            >آموزش پایتون</a
+          >
+          <a
+            style="
+              display: block;
+              margin-top: 20px;
+              font-size: 18px;
+              color: var(--Font3--color);
+              text-decoration: none;
+              position: relative;
+              top: 50px;
+              right: 120px;
+            "
+            href="#"
+            >دوره طراحی قالب حرفه ای</a
+          >
+          <a
+            style="
+              display: block;
+              margin-top: 20px;
+              font-size: 18px;
+              color: var(--Font3--color);
+              text-decoration: none;
+              position: relative;
+              top: 50px;
+              right: 120px;
+            "
+            href="#"
+            >آموزش BootStrap</a
+          >
+          <a
+            style="
+              display: block;
+              margin-top: 20px;
+              font-size: 18px;
+              color: var(--Font3--color);
+              text-decoration: none;
+              position: relative;
+              top: 50px;
+              right: 120px;
+            "
+            href="#"
+            >مستر فریلنس</a
+          >
+        </div>
+        <div>
+          <span
+            style="
+              color: var(--Font1-color);
+              font-size: 22px;
+              font-weight: 800;
+              margin-right: 70px;
+              position: relative;
+              top: 50px;
+            "
+            >دسترسی سریع</span
+          >
+          <a
+            style="
+              display: block;
+              margin-top: 20px;
+              font-size: 18px;
+              color: var(--Font3--color);
+              text-decoration: none;
+              position: relative;
+              top: 50px;
+              right: 70px;
+            "
+            href="#"
+            >قوانین و مقررات</a
+          >
+          <a
+            style="
+              display: block;
+              margin-top: 20px;
+              font-size: 18px;
+              color: var(--Font3--color);
+              text-decoration: none;
+              position: relative;
+              top: 50px;
+              right: 70px;
+            "
+            href="#"
+            >ارسال تیکت</a
+          >
+          <a
+            style="
+              display: block;
+              margin-top: 20px;
+              font-size: 18px;
+              color: var(--Font3--color);
+              text-decoration: none;
+              position: relative;
+              top: 50px;
+              right: 70px;
+            "
+            href="#"
+            >همه دوره ها</a
+          >
+        </div>
+        <div></div>
+      </div>
+    </footer>
+    <script src="/darkMod-Color/Script.js"></script>
+    <!-- <script src="/page/home-page/js/script.js"></script> -->
+    <script src="/page/Course-information/course-data.js"></script>
+    <script src="/prudact-basket/basket.js"></script>
+    <script src="/searchBoxCode/searchbox.js"></script>
+    <script>
+      Basket.init(); // نمایش اولیه
+
+      courseBuyBtn.addEventListener("click", function () {
+        const courseId = selectedCourseId;
+        const course_data = {
+          id: courseId,
+          price: courseData[courseId].price,
+          title: courseData[courseId].title,
+          image: courseData[courseId].image,
+        };
+        Basket.add(course_data); // اضافه کردن آیتم
+        updateBasketItemCount();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1200">
+
+    <title>آکادمی آموزش برنامه نویسی دارک لرن</title>
+    <link rel="stylesheet" href="/page/home-page/css/style.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.7.2-web/css/all.css">
+    <link rel="icon" href="/image/Group 2.png">
+    <link rel="stylesheet" href="/darkMod-Color/Style.css">
+    <link rel="stylesheet" href="/page/Course-information/course.css">
+    <script src="/page/acourseAbject.js"></script>
+
+</head>
+<body class="BODY_class">
+     <!-- وقتی سبد خرید کلیک میشه کل صفحه تار میشه -->
+
+     <div id="overlay" class="overlay"></div>
+
+     <div class="basket-product-container" style="top: 39px; left: 264px;">
+       <i id="backetIcon" class="fa-solid fa-bag-shopping Hed--icone sabad"></i>
+       <!-- <i id="backetIcon" class="fa-solid fa-bag-shopping"></i> -->
+       <div class="prudact-box" id="icone-shope">
+         <!-- باکس اول سبد خرید\ -->
+         <div class="oneBasketBox">
+           <span>سبد خرید من</span>
+           <div>
+             <span id="basketItemCount">۰</span>
+             <span>دوره</span>
+           </div>
+         </div>
+         <!-- باکس نشان دادن دوره های که کاربر قصد خرید داشته -->
+         <div class="prudakt-buy-user" id="basketBox"></div>
+         <!-- باکس محاسبه هزینه تمام دوره ها و دکمه پرداخت -->
+         <div class="prudact-ent-Box">
+           <div class="total-price-style">
+             <span>مبلغ قابل پرداخت:</span>
+             <span id="totalPrice"></span>
+           </div>
+           <div>
+             <button class="buy--allPrice-prudact">پرداخت</button>
+           </div>
+         </div>
+       </div>
+     </div>
+ 
+     <!-- -------------------------------------------- -->
+    <header class="header">
+        <div class="Menu--Bar">
+
+            <a href="/page/singin-login-page/LOGIN/login.html"><button class="login-btn"><i class="fa-regular fa-user"></i>ورود | عضویت</button></a>
+            <i id="toggle-theme"  class="fa-solid fa-moon  MOON-icon" style="left: -16px;"></i>
+            <!-- سبد خرید  -->
+
+
+            <img class="logo" src="/image/Group 2.png" alt="Dark Learn">
+            <ul class="menu">
+                <li id="scrollButton">دوره های رایگان
+                    <!-- <div class="none-menu-coursr">
+                        <ul class="none-menu-coursr2">
+                            <li>فرانت اند</li>
+                            <li>بک اند</li>
+                            <li>ارتقای مهارت</li>
+                            <li>پایتون</li>
+                        </ul>
+                    </div> -->
+                </li>
+                <a href="/page/AllCourse.html"><li>همه دوه ها</li></a> 
+                <li id="scrollArticleButton">مقالات</li>
+            </ul>
+        </div>
+        <h1>دارک لرن، اولین گام برنامه نویس شدن</h1>
+        <p class="oneParagraph">با آکادمی خصوصی دارک لرن، علم برنامه نویسی رو با خیال راحت یاد بگیر و پیشرفت کن</p>
+        <div class="search">
+            <input id="searchInput" class="search-box" type="search" placeholder="جستوجو در بین دوره ها ...">
+            <div class="sercBOx-toSerch" id="results"></div>
+            <div class="icone-back">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="site-information">
+            <div class="student">
+                <img src="/page/home-page/image/conversation-min.webp" alt="">
+                <span id="student-count" class="heder-curs-rr">0</span>
+                <p class="information-name dd">دانشجو</p>
+            </div>
+            <div class="curser">
+                <img src="/page/home-page/image/book-min.webp" alt="">
+                <span id="curse-number-all" class="heder-curs-rr">0</span>
+                <p class="information-name">دوره آموزشی</p>
+            </div>
+            <div class="time">
+                <img src="/page/home-page/image/clock-min.webp" alt="">
+                <span id="total-time" class="heder-curs-rr">0</span>
+                <p class="information-name">ساعت آموزش</p>
+            </div>
+        </div>
+        <!-- <div class="hedEnd">
+            <img style="background-color: #FFF;" class="downsvg" src="/image/down-arrow-svgrepo-com.svg" alt="down">
+        </div> -->
+        
+    </header>
+    <main>
+        <article class="arti1">
+            <div class="topMain">
+                <h3 class="endedCurs" >آخرین دوره های ما</h3>
+                <p class="powerText">سکوی پرتاپ شما به سمت موفقیت</p>
+                <a class="moreCurse" href="#">همه دوره ها </a>
+            </div>
+            <div class="AllCoursers-cont courses">
+                <div class="dore" onclick="openCourse('php')" data-id="php">
+                    <img class="cursphoto" src="/image/curss-Image/php.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش جامع PHP از صفر + پروژه محور</a>
+                        <p class="abut_curs">دوره آموزش PHP یک برنامه جامع و کاربردیست و برای افرادی طراحی شده که...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz"></h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                </div>
+                <div class="dore" onclick="openCourse('design')" data-id="design">
+                    <img src="/image/curss-Image/design-pattern.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش جامع دیزاین پترن ها برای برنامه نویسان</a>
+                        <p class="abut_curs">دوره دیزاین پترن به شما کمک می‌کند کدهای خوانا و مقیاس‌پذیر بنویسید و با یادگیری...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz"></h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                </div>
+                <div class="dore" onclick="openCourse('Three')" data-id="Three">
+                    <img src="/image/curss-Image/create-animation.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش انیمیشن سازی برای فرانت‌اند با GSAP و Three.js</a>
+                        <p class="abut_curs">دوره Three.js دارک لرن به شما یاد می‌دهد چطور گرافیک‌های سه‌بعدی جذاب با استفاده از...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz"></h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                </div>
+                <div class="dore" onclick="openCourse('algoritm')" data-id="algoritm">
+                    <img src="/image/curss-Image/algoritm.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش الگوریتم و ساختمان داده به زبان ساده</a>
+                        <p class="abut_curs">ساختمان داده و الگوریتم، یک مهارت ضروری برای ورود به دنیای برنامه نویسیه که دیدگاه...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz"></h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                </div>
+                <div class="dore" onclick="openCourse('teknik')" data-id="teknik">
+                    <img src="/image/curss-Image/tecnik.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">تکنیک های قرارداد نویسی برای برنامه نویسان</a>
+                        <p class="abut_curs">دوره تکنیک‌های قرارداد نویسی دارک لرن، مهارت‌های تنظیم قراردادهای حرفه‌ای را به...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz"></h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                </div>
+                <div class="dore" onclick="openCourse('dataPython')" data-id="dataPython">
+                    <img src="/image/curss-Image/data-payton.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">Data Visualization با پایتون</a>
+                        <p class="abut_curs">ما تو دنیایی زندگی میکنیم که همه چیز به سمت سریع تر شدن حرکت میکنه. برای ذهن...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz"></h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                </div>
+                <div class="dore" onclick="openCourse('createGameJS')" data-id="createGameJS">
+                    <img src="/image/curss-Image/javsScript.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">بازی سازی تحت وب با JS</a>
+                        <p class="abut_curs">دوره بازی‌سازی با جاوااسکریپت در دارک لرن به شما ساخت بازی‌های آنلاین را با استفاده از...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz"></h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                </div>
+                <div class="dore" onclick="openCourse('nest')" data-id="nest">
+                    <img src="/image/curss-Image/nest-js.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش پروژه محور NestJS از صفر!</a>
+                        <p class="abut_curs">NestJS یه فریم‌ورک توسعه سمت سرور وب با TypeScript برای ساخت برنامه‌های مبتنی بر...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz"></h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                </div>
+                <div class="dore" onclick="openCourse('Linux')" data-id="Linux">
+                    <img src="/image/curss-Image/linux.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش جامع لینوکس برای برنامه نویسان</a>
+                        <p class="abut_curs">لینوکس یک سیستم‌عامل قدرتمند، امن و متن‌باز است که در سرورها، توسعه نرم‌افزار،...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz"></h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                </div>
+                <div class="dore" onclick="openCourse('js')" data-id="js">
+                    <img src="/image/curss-Image/js.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش جاوا اسکریپت مقدماتی تا پیشرفته + مینی پروژه</a>
+                        <p class="abut_curs">آموزش جاوا اسکریپت برای تمامی افرادی ک قصد ورود به زبان برنامه نویسی دارند مناسب...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz"></h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                </div>
+                <div class="dore" onclick="openCourse('wordpres')" data-id="wordpres">
+                    <img src="/image/curss-Image/wordpres.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش جامع توسعه وردپرس</a>
+                        <p class="abut_curs">وردپرس پرکاربردترین و محبوب‌ترین سیستم مدیریت محتوا است که در دنیای طراحی سایت...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz">۲.۵</h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss">۷۶</span>
+                        <span class="price"></span>
+                    </div>
+                </div>
+                <div class="dore" onclick="openCourse('telegramBat')" data-id="telegramBat">
+                    <img src="/image/curss-Image/tellegrambot.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش ساخت ربات تلگرام با پایتون</a>
+                        <p class="abut_curs">آیا تا به حال به این فکر کرده‌اید که یک دستیار ربات تلگرامی مخصوص خودتان داشته باشید...</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo">$1$2</h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyaz">۴.۱</h5>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss">۹۳</span>
+                        <span class="price">۸۰۰,۰۰۰</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- End One Article -->
+
+        <div class="highlight-box"></div>
+          
+
+        <!-- start article two -->
+         
+        <article class="arti2">
+            <div class="resBoxTwoArt">
+            <div class="planDiv">
+                <span class="planText">نقشه راه ها</span>
+                <span class="powerText--Plan">نقشه های راه برای شروع اصولی یادگیری</span>
+            </div>
+            <!-- <a href="/page/AllCourse.html"></a> -->
+            <div class="planBox">
+                
+                <div class="planBoxContent frontEndPLan" onclick="window.location.href='AllCourse.html?category=frontend';">
+                        <!-- <image class="svgPlan" src="/image/monitor-code-svgrepo-com.svg" alt="Front-End Plan"> -->
+                            <svg class="svgPlan" fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>monitor-code</title> <path d="M28 2.25h-24c-1.518 0.002-2.748 1.232-2.75 2.75v16c0.002 1.518 1.232 2.748 2.75 2.75h8.806l-2.167 4.5h-4.64c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h20c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0h-4.537l-2.25-4.5h8.787c1.518-0.002 2.748-1.232 2.75-2.75v-16c-0.002-1.518-1.232-2.748-2.75-2.75h-0zM19.787 28.25h-7.482l2.166-4.5h3.065zM29.25 21c-0.001 0.69-0.56 1.249-1.25 1.25h-24c-0.69-0.001-1.249-0.56-1.25-1.25v-16c0.001-0.69 0.56-1.249 1.25-1.25h24c0.69 0.001 1.249 0.56 1.25 1.25v0zM9.026 13.252l3.538-4.044c0.114-0.131 0.184-0.303 0.184-0.492 0-0.414-0.336-0.75-0.75-0.75-0.223 0-0.424 0.098-0.562 0.253l-0.001 0.001-4 4.572c-0.115 0.131-0.185 0.304-0.185 0.494 0 0.207 0.084 0.395 0.22 0.53l4 4c0.135 0.131 0.319 0.212 0.523 0.212 0.414 0 0.75-0.336 0.75-0.75 0-0.203-0.081-0.388-0.212-0.523l0 0zM20.564 8.221c-0.138-0.156-0.339-0.254-0.562-0.254-0.414 0-0.75 0.336-0.75 0.75 0 0.189 0.070 0.361 0.184 0.493l-0.001-0.001 3.537 4.043-3.504 3.504c-0.136 0.136-0.219 0.323-0.219 0.53 0 0.415 0.336 0.751 0.751 0.751 0.208 0 0.395-0.084 0.531-0.22v0l4-4c0.135-0.136 0.218-0.323 0.218-0.53 0-0.19-0.070-0.363-0.186-0.495l0.001 0.001z"></path> </g></svg>
+                            <span style="color: #fff; font-size: 20px;">فرانت‌اند</span>
+                            <span style="color: #fff; font-size: 18px;">۲۳ دوره</span>
+                </div>
+                <div class="planBoxContent scurityPlan" onclick="window.location.href='AllCourse.html?category=security';">
+                        <!-- <image class="svgPlan" src="/image/security-protection-shield-done-tick-check-svgrepo-com.svg" alt="Security Plan"> -->
+                            <svg class="svgPlan" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;stroke:#FFFFFF;stroke-width:1.984;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#FFFFFF;stroke-width:1.984;stroke-linejoin:round;stroke-miterlimit:10;} </style> <path class="st0" d="M25,6.7c-3.4,0-6.6-1.4-9-3.7c-2.4,2.3-5.6,3.7-9,3.7C5.6,6.7,4.3,6.4,3,6c0,14,5.5,19.6,13,23 c7.5-3.4,13-9,13-23C27.7,6.4,26.4,6.7,25,6.7z"></path> <polyline class="st0" points="12,16 15,19 21,13 "></polyline> </g></svg>
+                            <span style="color: #fff; font-size: 20px;">امنیت</span>
+                            <span style="color: #fff; font-size: 18px;">۹ دوره</span>
+                </div>
+                
+                <div class="planBoxContent phytonPlan" onclick="window.location.href='AllCourse.html?category=python';">
+                        <!-- <image class="svgPlan" src="/image/python-16-svgrepo-com.svg" alt="Python Plan"> -->
+                            <svg class="svgPlan" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.79 1.574h3.866c.14 0 .252.11.252.246v5.186a.25.25 0 01-.252.246H6.344c-.975 0-1.766.77-1.766 1.72v1.162a.25.25 0 01-.253.243H1.867a.25.25 0 01-.253-.246V6.177a.25.25 0 01.252-.246H7.98c.418 0 .757-.33.757-.737a.747.747 0 00-.757-.738H5.537V1.82a.25.25 0 01.253-.246zm5.632 2.592V1.82c0-.95-.79-1.72-1.766-1.72H5.79c-.976 0-1.767.77-1.767 1.72v2.636H1.867C.89 4.456.1 5.226.1 6.176v3.955c0 .95.79 1.72 1.766 1.72h2.46c.085 0 .17-.006.252-.017v2.346c0 .95.79 1.72 1.766 1.72h3.866c.976 0 1.767-.77 1.767-1.72v-2.636h2.156c.976 0 1.767-.77 1.767-1.72V5.868c0-.95-.79-1.72-1.767-1.72h-2.458c-.086 0-.17.005-.253.017zm-5.33 5.974V8.994a.25.25 0 01.252-.246h3.312c.976 0 1.766-.77 1.766-1.72V5.866a.25.25 0 01.253-.243h2.458c.14 0 .253.11.253.246v3.954a.25.25 0 01-.252.246H8.02a.747.747 0 00-.757.737c0 .408.339.738.757.738h2.442v2.636a.25.25 0 01-.253.246H6.344a.25.25 0 01-.252-.246v-4.04z" fill="#FFFFFF"></path> </g></svg>
+                            <span style="color: #fff; font-size: 20px;">پایتون</span>
+                            <span style="color: #fff; font-size: 18px;">۷ دوره</span>
+                </div>
+                <div class="planBoxContent sowftwarePlan" onclick="window.location.href='AllCourse.html?category=sowtware';">
+                        <!-- <image class="svgPlan" src="/image/puzzle-piece-02-svgrepo-com.svg" alt="Sawftware Plan"> -->
+                            <svg class="svgPlan" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2L15.6 5.6C18 -0.7 24.7 6 18.4 8.4L22 12L18.4 15.6C16 9.3 9.3 16 15.6 18.4L12 22L8.4 18.4C6 24.7 -0.7 18 5.6 15.6L2 12L5.6 8.4C8 14.7 14.7 8 8.4 5.6L12 2Z" stroke="#FFFFFF" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            <span style="color: #fff; font-size: 20px;">مهارت های نرم</span>
+                            <span style="color: #fff; font-size: 18px;">۴ دوره</span>
+                </div>
+            </div>
+            </div>
+        </article>
+        <!-- ------------------------- end article 2 ------------- -->
+
+        <div class="highlight-box2"></div>
+
+
+        <!-- ------------------------- start article 3 ------------- -->
+
+        <article class="arti3">
+            <div class="skhrinCurs">
+                <div class="treeArticleHeder">
+                    <span class="treeArticleTitle">پرطرفدار ترین دوره ها</span>
+                    <span style="font-size: 24px; color: var(--Font1-color); font-weight: 800;">دوره های محبوب و پروژه محور دارک لرن</span>
+                </div>
+                <div class="changeSlidBoxBtn">
+                    <button class="prev-btn">❮</button>
+                    <button class="next-btn">❯</button>
+                </div>
+                
+            </div>
+            
+            <div class="mainScfrollBox">
+             
+                <!-- ------------------------- scrool saidBAr -------------------- -->
+                <div class="slideshow-container">
+                    <div class="slideshow-wrapper">
+                        <div class="slide-box" onclick="openCourse('black_network')" data-id="black_network">
+                            <img class="cursphoto" src="/image/curss-Image/blackNetwork-scroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش شبکه با گرایش امنیت | Black Network</a>
+                        <p class="abut_curs">دنیای هک و امنیت به اندازه کافی پر چالش و جذاب هست و اگرشما بخواید وارد این حوزه بشید. حتما…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('bootsrap')" data-id="bootsrap">
+                            <img class="cursphoto" src="/image/curss-Image/bootstrapt-Scroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش بوت استرپ 5 مقدماتی تا پیشرفته (2023)</a>
+                        <p class="abut_curs">خوش اومدین به آموزش بوت استرپ 5 دارک لرن! حتما تا الان html و css رو کامل بلدی و گذرت به…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('dark_python')" data-id="dark_python">
+                            <img class="cursphoto" src="/image/curss-Image/DarkpytonScroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش پایتون با گرایش امنیت | پایتون سیاه</a>
+                        <p class="abut_curs">زبان برنامه نویسی پایتون بخاطر سادگی. قدرت. و جامعه اماری بالایی که داره تونسته جز محبوب ترین زبان های برنامه…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('freelancer')" data-id="freelancer">
+                            <img class="cursphoto" src="/image/curss-Image/Freelancer-scroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">مستر فریلنس - هنر همکاری موفق با کارفرماها</a>
+                        <p class="abut_curs">موفق بودن یک وکیل به تعداد بالای پرونده هاش نیست. بلکه به تعداد کیفیت پرونده هاییه که حل کرده. یک…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('github')" data-id="github">
+                            <img class="cursphoto" src="/image/curss-Image/Git-GithubScroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش git و github</a>
+                        <p class="abut_curs">گیت یه Version Controller هست که نسخه های مختلف پروژه هامون رو مدیریت و نگهداری میکنن. گیت یکی از پراستفاده…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('flex_template')" data-id="flex_template">
+                            <img class="cursphoto" src="/image/curss-Image/html-css-template-scroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش حرفه ای طراحی قالب با Html Css FlexBox از صفر</a>
+                        <p class="abut_curs">بعد از یادگیری Html,Css  افراد با یک چالش بزرگی رو به رو میشن، اونم اینه که نمیتونن توسط دانشی که…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('python_pro')" data-id="python_pro">
+                            <img class="cursphoto" src="/image/curss-Image/miniProPythonScroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">پروژه های کاربردی با پایتون</a>
+                        <p class="abut_curs">قبل از اینکه بخواین این دوره رو ببینید اگر دوره آموزش پایتون رو ندیدین حتما دوره رو ببینید که خیلی…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('next')" data-id="next">
+                            <img class="cursphoto" src="/image/curss-Image/nextScroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش Next.js بصورت پروژه محور</a>
+                        <p class="abut_curs">نکست یه فریمورک مبتنی بر ری‌اکت هست که امروزه تو بازار کار یکی از مهم‌ترین تکنولوژی‌ها برای توسعه دهنده های…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('pyton_t')" data-id="pyton_t">
+                            <img class="cursphoto" src="/image/curss-Image/python-scroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش پایتون مقدماتی تا پیشرفته + پروژه های جذاب</a>
+                        <p class="abut_curs">حیف نیست محبوب ترین زبان برنامه نویسی دنیا رو  ناقص و بی هدف یادبگیری؟ آموزش پایتون از زیر صفر و پایه…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('react_freamwork')" data-id="react_freamwork">
+                            <img class="cursphoto" src="/image/curss-Image/reactFremworkScroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش ۲۰ کتابخانه کاربردی ReactJS برای بازارکار</a>
+                        <p class="abut_curs">‌کتابخانه‌ها باعث افزایش سرعت کدنویسی میشن. در حدی که تو بازار کار هم از کتابخانه های مختلفی برای توسعه پروژه‌ها…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('react')" data-id="react">
+                            <img class="cursphoto" src="/image/curss-Image/reactScroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش ری اکت ( ReactJS ) در دنیای واقعی | از 0 تا استخدام [منتورشیپ]</a>
+                        <p class="abut_curs">حدود 99 ساعت آموزش جامع و تخصصی ری اکت!  شما در دوره آموزش ری اکت ReactJS ، این کتابخانه قدرتمند…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('css_talwind')" data-id="css_talwind">
+                            <img class="cursphoto" src="/image/curss-Image/tailwindCssScroll.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش جامع و پروژه محور Tailwind Css + دیزاین فروشگاه قهوه</a>
+                        <p class="abut_curs">tailwind css یک فریمورک Utility First هست، این فریمورک متشکل از یکسری کلاس های آماده ای هست که شما برای…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                        <div class="boxCursPrise">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span class="studentsBuyCurss"></span>
+                            <span class="price"></span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="dots-container"></div>
+                <!-- ------------------------- scrool saidBAr -------------------- -->
+            </div>
+        </article>
+
+        <div class="ameyzing">
+            <div class="cicle M"></div>
+            <div class="cicle F"></div>
+        </div>
+
+        <article class="arti4">
+            <div class="art4title">
+                <div class="art4Hed">
+                    <span class="myHelp">ما چه کمکی میتونیم بهت بکنیم</span>
+                    <span class="helpTitleAbout">از شروع مسیر کنارتیم نمیذاریم آب تو دلت تکون بخوره</span>
+                    
+                </div>
+            </div>
+            <div class="helpAboutFirstDIV">
+                <div class="helpConBox">
+                    <div class="beyuti" style="background-color: #5fc3fc7c;">
+                        <i class="fa-solid fa-book-open" style="color: #41a9fffc;"></i>
+                    </div>
+                    <div class="HelpBox-cotnainer">
+                        <span style="width: 80%; padding-right: 10px;">تضمین کاملترین محتوا</span>
+                        <p style="width: 80%; padding-right: 10px;">بزار خیالت راحت کنم توی دوره هامون به ریز ترین موارد پرداختیم بعداز دیدن این دوره نیاز به هیچ آموزش دیگه ای نداری.</p>
+                    </div>
+                </div>
+                <div class="helpConBox">
+                    <div class="beyuti" style="background-color: #eaf4266e;">
+                        <i class="fa-solid fa-message" style="color: #cfe817;"></i>
+                    </div>
+                    <div class="HelpBox-cotnainer">
+                        <span style="width: 80%; padding-right: 10px;">پشتیبانی دائمی</span>
+                        <p style="width: 80%; padding-right: 10px;">هرجا سوالی داشتی به مشکل خوردی بچه های تیم آمادن که مشکلت رو حل کنن تلاشمون اینه بدون نگرانی دوره رو کامل کنی.</p>
+                    </div>
+                </div>
+                <div class="helpConBox">
+                    <div class="beyuti" style="background-color: #61ff8363;">
+                        <i class="fa-solid fa-signal" style="color: #67ff88;"></i>
+                    </div>
+                    <div class="HelpBox-cotnainer">
+                        <span style="width: 80%; padding-right: 10px;">پروژه محور در راستای بازار کار</span>
+                        <p style="width: 80%; padding-right: 10px;">کل تمرکز ما رو این هستش بعداز تموم شدن دوره شخص بتونه با اعتماد به نفس کامل پروژه بزنه واقدام کنه برای کسب درآمد.</p>
+                    </div>
+                </div>
+                <div class="helpConBox">
+                    <div class="beyuti" style="background-color: #fa646483;">
+                        <i class="fa-solid fa-paste" style="color: #ff5555;"></i>
+                    </div>
+                    <div class="HelpBox-cotnainer">
+                        <span style="width: 80%; padding-right: 10px;">سراغ حرفه ای ها رفتیم</span>
+                        <p style="width: 80%; padding-right: 10px;">به جرعت میتونم بگم سخت گیرترین شرایط جذب مدرس داریم چون برامون مهمه محتوا خیلی ساده و روان بیان بشه که توی یادگیری به مشکل نخورید.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- ------------------------- end article 2 ------------- -->
+
+        <div class="highlight-box3"></div>
+
+
+        <!-- ------------------------- start article 3 ------------- -->
+        <!-- ------------------------------------------------    ARTICLE 5    ---------------------------------------  -->
+         <article class="arti5">
+
+            <div class="skhrinCurs">
+                <div class="treeArticleHeder">
+                    <span class="treeArticleTitle">جدیدتریــن ها</span>
+                    <span style="font-size: 24px; color: var(--Font1-color); font-weight: 800;">دوره‌های جدید، فرصت‌های نو</span>
+                </div>
+                <div class="changeSlidBoxBtn">
+                    <button class="prev-btnTwo">❮</button>
+                    <button class="next-btnTwo">❯</button>
+                </div>
+                
+            </div>
+            
+            <div class="mainScfrollBox">
+             
+                <!-- ------------------------- scrool saidBAr -------------------- -->
+                <div class="slideshow-container">
+                    <div class="slideshow-wrapperTwo">
+                        <div class="slide-box" onclick="openCourse('design')" data-id="design">
+                            <img class="cursphoto" src="/image/curss-Image/design-pattern.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش جامع دیزاین پترن ها برای برنامه نویسان</a>
+                        <p class="abut_curs">دوره دیزاین پترن به شما کمک می‌کند کدهای خوانا و مقیاس‌پذیر بنویسید و با یادگیری الگوهای استاندارد، به یک برنامه…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('leaflet_js')" data-id="leaflet_js">
+                            <img class="cursphoto" src="/image/curss-Image/Leafleft-js.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">نمایش نقشه‌های تعاملی با Leaflet.js</a>
+                        <p class="abut_curs">دوره Leaflet.JS به شما یاد می‌دهد چگونه نقشه‌های تعاملی سبک و جذاب بسازید. این دوره پروژه‌محور است و از مبتدی…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('telegramBat')" data-id="telegramBat">
+                            <img class="cursphoto" src="/image/curss-Image/tellegrambot.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش ساخت ربات تلگرام با پایتون</a>
+                        <p class="abut_curs">آیا تا به حال به این فکر کرده‌اید که یک دستیار ربات تلگرامی مخصوص خودتان داشته باشید که کارها را…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('Linux')" data-id="Linux">
+                            <img class="cursphoto" src="/image/curss-Image/linux.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش جامع لینوکس برای برنامه نویسان</a>
+                        <p class="abut_curs">لینوکس یک سیستم‌عامل قدرتمند، امن و متن‌باز است که در سرورها، توسعه نرم‌افزار، امنیت سایبری و سرویس‌های گسترده‌ای…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('bash_script')" data-id="bash_script">
+                            <img class="cursphoto" src="/image/curss-Image/Bash-Script-.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش کاربردی Bash Script</a>
+                        <p class="abut_curs">اگر به‌عنوان یک برنامه‌نویس از اجرای دستورات تکراری برای تست برنامه‌های خود خسته شده‌اید، وقت آن رسیده که اسکریپت نویسی…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('eslint')" data-id="eslint">
+                            <img class="cursphoto" src="/image/curss-Image/eslint.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش کاربردی ESlint</a>
+                        <p class="abut_curs">ESLint برای برنامه‌نویسان جاوااسکریپت طراحی شده تا با این ابزار، کدهایی بهینه و بدون خطا بنویسند. نحوه پیکربندی و استفاده…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('createGameJS')" data-id="createGameJS">
+                            <img class="cursphoto" src="/image/curss-Image/javsScript.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">بازی سازی تحت وب با JS</a>
+                        <p class="abut_curs">دوره بازی‌سازی با جاوااسکریپت در دارک لرن به شما ساخت بازی‌های آنلاین را با استفاده از CSS، HTML و JavaScript آموزش…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('Three')" data-id="Three">
+                            <img class="cursphoto" src="/image/curss-Image/create-animation.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش انیمیشن سازی برای فرانت‌اند با GSAP و Three.js</a>
+                        <p class="abut_curs">دوره Three.js دارک لرن به شما یاد می‌دهد چطور گرافیک‌های سه‌بعدی جذاب با استفاده از این کتابخانه بسازید. این دوره به…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('php_api')" data-id="php_api">
+                            <img class="cursphoto" src="/image/curss-Image/API-PHP.jpg" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش جامع api نویسی با PHP</a>
+                        <p class="abut_curs">API یکی از پر کاربردترین اجزای نرم افزاریه که حتما باید بلد باشی! توی این دوره قراره api نویسی رو…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('english_language')" data-id="english_language">
+                            <img class="cursphoto" src="/image/curss-Image/English.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش جامع زبان انگلیسی</a>
+                        <p class="abut_curs">‌با دوره جامع آموزش زبان انگلیسی دارک لرن، زبان انگلیسی را برای پیشرفت در برنامه‌نویسی حرفه‌ای یاد بگیرید و مهارت‌های خود…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('wordpres')" data-id="wordpres">
+                            <img class="cursphoto" src="/image/curss-Image/wordpres.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش ری اکت ( ReactJS ) در دنیای واقعی | از 0 تا استخدام [منتورشیپ]</a>
+                        <p class="abut_curs">حدود 99 ساعت آموزش جامع و تخصصی ری اکت!  شما در دوره آموزش ری اکت ReactJS ، این کتابخانه قدرتمند…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                    <div class="boxCursPrise">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span class="studentsBuyCurss"></span>
+                        <span class="price"></span>
+                    </div>
+                        </div>
+                        <div class="slide-box" onclick="openCourse('php')" data-id="php">
+                            <img class="cursphoto" src="/image/curss-Image/php.webp" alt="#">
+                    <div class="boxCursName">
+                        <a class="cours_name">آموزش جامع PHP از صفر + پروژه محور</a>
+                        <p class="abut_curs">دوره آموزش PHP یک برنامه جامع و کاربردیست و برای افرادی طراحی شده که میخواهند مهارت‌های خود را در زمینه…</p>
+                    </div>
+                    <div class="adminName">
+                        <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                        
+                        <div class="emtyaz">
+                            <h5 class="addEmtyazScroolbar"></h5>
+                            <i class="fa-solid fa-star StarsScroll"></i>
+                        </div>
+                    </div>
+                        <div class="boxCursPrise">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span class="studentsBuyCurss"></span>
+                            <span class="price"></span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="dots-containerTwo"></div>
+         </article>
+            <!-- ------------------------- end article 5 ------------- -->
+
+        <div class="highlight-box4"></div>
+
+
+        <!-- ------------------------- start article 6 ------------- -->
+     
+         <article class="arti6">
+            <div class="skhrinCurs">
+                <div class="treeArticleHeder">
+                    <span class="treeArticleTitle" id="targetArticleSection">آخرین مقالات ما</span>
+                    <span style="font-size: 24px; color: var(--Font1-color); font-weight: 800;">مقاله های بروز برنامه نویسی و تکنولوژی‌</span>
+                </div>
+                <span class="allFili">همه مقالات</span>
+            </div>
+            <div class="container">
+                <div class="maghale">
+                    <img class="cursphoto" src="/image/Articles-image/5ways.webp" alt="#">
+            <div class="ArticNameTitle">
+                <a class="cours_name">5 مسیر متفاوت برای تبدیل شدن به یک برنامه‌نویس پردرآمد...</a>
+                <p class="abut_curs">‌اگر هنوز فکر می‌کنی برای تبدیل شدن به یک برنامه‌نویس موفق و پردرآمد باید حتماً مدرک مهندسی نرم‌افزار داشته باشی، وقتشه این ف...</p>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar">۱۴۰۴/۰۱/۰۶</h5>
+                </div>
+            </div>
+            <div class="articleEndBox">
+
+                <a href="/404-template/index.html" style="text-decoration: none;"><span class="formAr">مطالعه مقاله</span></a>
+                <div class="article--icone--box">
+                    <i class="fa-solid fa-arrow-left" style="font-size: 12px; color: #FFF;"></i>
+                </div>
+            </div>
+                </div>
+                <div class="maghale">
+                    <img class="cursphoto" src="/image/Articles-image/learn_map-AI.webp" alt="#">
+            <div class="ArticNameTitle">
+                <a class="cours_name">نقشه راه یادگیری هوش مصنوعی در سال 1404</a>
+                <p class="abut_curs">‌سال ۱۴۰۴ تازه از راه رسیده و هر سال جدید فرصتی برای شروع مسیرهایی است که همیشه دلمون می‌خواست واردشون بشیم، اما یا جراتش رو نداشتیم یا نمی‌دونستیم از کجا…</p>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar">۱۴۰۴/۰۱/۰۸</h5>
+                </div>
+            </div>
+            <div class="articleEndBox">
+                <a href="/404-template/index.html" style="text-decoration: none;"><span class="formAr">مطالعه مقاله</span></a>
+                <div class="article--icone--box">
+                    <i class="fa-solid fa-arrow-left" style="font-size: 12px; color: #FFF;"></i>
+                </div>
+            </div>
+                </div>
+                <div class="maghale">
+                    <img class="cursphoto" src="/image/Articles-image/learnProgramerWith-Game.webp" alt="#">
+            <div class="ArticNameTitle">
+                <a class="cours_name">یادگیری برنامه نویسی با بازی آنلاین codingame</a>
+                <p class="abut_curs">اگر یادگیری برنامه‌نویسی همیشه برای تو شبیه یک ماموریت سخت و پیچیده بود، وقت آن رسیده که این دیدگاه را عوض کنی! تصور کن به‌جای خواندن ده‌ها صفحه آموزش خسته‌کننده،…</p>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar">۱۴۰۴/۰۱/۱۰</h5>
+                </div>
+            </div>
+            <div class="articleEndBox">
+                <a href="/404-template/index.html" style="text-decoration: none;"><span class="formAr">مطالعه مقاله</span></a>
+                <div class="article--icone--box">
+                    <i class="fa-solid fa-arrow-left" style="font-size: 12px; color: #FFF;"></i>
+                </div>
+            </div>
+                </div>
+                <div class="maghale">
+                    <img class="cursphoto" src="/image/Articles-image/CURSOR-AI.webp" alt="#">
+            <div class="ArticNameTitle">
+                <a class="cours_name">ابزار هوش مصنوعی Cursor AI؛ راز جدید برنامه‌نویسان حرفه‌ای</a>
+                <p class="abut_curs">هوش مصنوعی در سال های اخیر تحولات شگفت‌ انگیزی در دنیای برنامه‌ نویسی ایجاد کرده است. از ابزارهای تکمیل کد گرفته تا دیباگرهای هوشمند، تقریباً هر روز یک محصول جدید…</p>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar">۱۴۰۴/۰۱/۱۴</h5>
+                </div>
+            </div>
+            <div class="articleEndBox">
+                <a href="/404-template/index.html" style="text-decoration: none;"><span class="formAr">مطالعه مقاله</span></a>
+                <div class="article--icone--box">
+                    <i class="fa-solid fa-arrow-left" style="font-size: 12px; color: #FFF;"></i>
+                </div>
+            </div>
+                </div>
+            </div>
+         </article>
+               <!-- ------------------------- end article 6 ------------- -->
+
+        <div class="highlight-box5"></div>
+
+
+        <!-- ------------------------- start article 7 ------------- -->
+     
+         <article class="arti7">
+            <div class="skhrinCurs">
+                <div class="treeArticleHeder">
+                    <span class="treeArticleTitle" id="targetSection">محبوب ترین دوره ها</span>
+                    <span style="font-size: 24px; color: var(--Font1-color); font-weight: 800;">پرمخاطب ترین دوره های رایگان سبزلرن</span>
+                </div>
+                <span class="allFili">همه دوره ها</span>
+            </div>
+            <div class="containerFree">
+                <div class="slide-box free-course" style="height: 365px;" onclick="openCourse('html')" data-id="html">
+                    <img class="cursphoto" src="/image/Free_couers/HTML.webp" alt="#">
+            <div class="boxCursName" style="height: 74px;">
+                <a class="cours_name">آموزش HTML رایگان مقدماتی تا پیشرفته</a>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar"></h5>
+                    <i class="fa-solid fa-star StarsScroll"></i>
+                </div>
+            </div>
+            <div class="boxCursPrise" style="height: 68px;">
+                <i class="fa-solid fa-user-group" style="position: relative; top: -9px;"></i>
+                <span class="studentsBuyCurss"></span>
+                <span class="price"></span>
+                <span class="free-Coures--Price"></span>
+                <div class="OFF--Percent">
+                    <span>۱۰۰٪</span>
+                </div>
+            </div>
+                </div>
+                <div class="slide-box free-course" style="height: 365px;" onclick="openCourse('css')" data-id="css">
+                    <img class="cursphoto" src="/image/Free_couers/CSS.webp" alt="#">
+            <div class="boxCursName" style="height: 74px;">
+                <a class="cours_name">آموزش Css رایگان مقدماتی تا پیشرفته</a>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar"></h5>
+                    <i class="fa-solid fa-star StarsScroll"></i>
+                </div>
+            </div>
+            <div class="boxCursPrise" style="height: 68px;">
+                <i class="fa-solid fa-user-group" style="position: relative; top: -9px;"></i>
+                <span class="studentsBuyCurss"></span>
+                <span class="price"></span>
+                <span class="free-Coures--Price"></span>
+                <div class="OFF--Percent">
+                    <span>۱۰۰٪</span>
+                </div>
+            </div>
+                </div>
+                <div class="slide-box free-course" style="height: 365px;" onclick="openCourse('css_html_pro')" data-id="css_html_pro">
+                    <img class="cursphoto" src="/image/Free_couers/Proj-html-css.webp" alt="#">
+            <div class="boxCursName" style="height: 74px;">
+                <a class="cours_name">پروژه های خلاقانه با Html و Css</a>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar"></h5>
+                    <i class="fa-solid fa-star StarsScroll"></i>
+                </div>
+            </div>
+            <div class="boxCursPrise" style="height: 68px;">
+                <i class="fa-solid fa-user-group" style="position: relative; top: -9px;"></i>
+                <span class="studentsBuyCurss"></span>
+                <span class="price"></span>
+                <span class="free-Coures--Price"></span>
+                <div class="OFF--Percent">
+                    <span>۱۰۰٪</span>
+                </div>
+            </div>
+                </div>
+                <div class="slide-box free-course" style="height: 365px;" onclick="openCourse('grid')" data-id="grid">
+                    <img class="cursphoto" src="/image/Free_couers/Course-thumbnail-CSSGrid-1-768x432.webp" alt="#">
+            <div class="boxCursName" style="height: 74px;">
+                <a class="cours_name">آموزش پروژه محور CSS Grid + پروژه لندینگ رستوران</a>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar"></h5>
+                    <i class="fa-solid fa-star StarsScroll"></i>
+                </div>
+            </div>
+            <div class="boxCursPrise" style="height: 68px;">
+                <i class="fa-solid fa-user-group" style="position: relative; top: -9px;"></i>
+                <span class="studentsBuyCurss"></span>
+                <span class="price"></span>
+                <span class="free-Coures--Price"></span>
+                <div class="OFF--Percent">
+                    <span>۱۰۰٪</span>
+                </div>
+            </div>
+                </div>
+                <div class="slide-box free-course" style="height: 365px;" onclick="openCourse('flex')" data-id="flex">
+                    <img class="cursphoto" src="/image/Free_couers/Com_flexbox-1-768x432.webp" alt="#">
+            <div class="boxCursName" style="height: 74px;">
+                <a class="cours_name">آموزش FlexBox پروژه محور + پروژه سایت هاستینگ</a>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar"></h5>
+                    <i class="fa-solid fa-star StarsScroll"></i>
+                </div>
+            </div>
+            <div class="boxCursPrise" style="height: 68px;">
+                <i class="fa-solid fa-user-group" style="position: relative; top: -9px;"></i>
+                <span class="studentsBuyCurss"></span>
+                <span class="price"></span>
+                <span class="free-Coures--Price"></span>
+                <div class="OFF--Percent">
+                    <span>۱۰۰٪</span>
+                </div>
+            </div>
+                </div>
+                <div class="slide-box free-course" style="height: 365px;" onclick="openCourse('dark_js')" data-id="dark_js">
+                    <img class="cursphoto" src="/image/Free_couers/Com_black_js-1-768x432.webp" alt="#">
+            <div class="boxCursName" style="height: 74px;">
+                <a class="cours_name">آموزش جاوااسکریپت با گرایش امنیت | جاوااسکریپت سیاه</a>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar"></h5>
+                    <i class="fa-solid fa-star StarsScroll"></i>
+                </div>
+            </div>
+            <div class="boxCursPrise" style="height: 68px;">
+                <i class="fa-solid fa-user-group" style="position: relative; top: -9px;"></i>
+                <span class="studentsBuyCurss"></span>
+                <span class="price"></span>
+                <span class="free-Coures--Price"></span>
+                <div class="OFF--Percent">
+                    <span>۱۰۰٪</span>
+                </div>
+            </div>
+                </div>
+                <div class="slide-box free-course" style="height: 365px;" onclick="openCourse('vscode')" data-id="vscode">
+                    <img class="cursphoto" src="/image/Free_couers/Com_VsCode-1-768x432.webp" alt="#">
+            <div class="boxCursName" style="height: 74px;">
+                <a class="cours_name">آموزش کاربردی Vscode | مقدماتی تا پیشرفته</a>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar"></h5>
+                    <i class="fa-solid fa-star StarsScroll"></i>
+                </div>
+            </div>
+            <div class="boxCursPrise" style="height: 68px;">
+                <i class="fa-solid fa-user-group" style="position: relative; top: -9px;"></i>
+                <span class="studentsBuyCurss"></span>
+                <span class="price"></span>
+                <span class="free-Coures--Price"></span>
+                <div class="OFF--Percent">
+                    <span>۱۰۰٪</span>
+                </div>
+            </div>
+             </div>
+                <div class="slide-box free-course" style="height: 365px;" onclick="openCourse('bessinens')" data-id="bessinens">
+                    <img class="cursphoto" src="/image/Free_couers/Besinens.webp" alt="#">
+            <div class="boxCursName" style="height: 74px;">
+                <a class="cours_name">راه اندازی کسب و کار شخصی برای برنامه نویسان</a>
+            </div>
+            <div class="adminName">
+                <h4 class="adminInfo"></h4><i class="fa-regular fa-user admin-icon"></i>
+                
+                <div class="emtyaz">
+                    <h5 class="addEmtyazScroolbar"></h5>
+                    <i class="fa-solid fa-star StarsScroll"></i>
+                </div>
+            </div>
+            <div class="boxCursPrise" style="height: 68px;">
+                <i class="fa-solid fa-user-group" style="position: relative; top: -9px;"></i>
+                <span class="studentsBuyCurss"></span>
+                <span class="price"></span>
+                <span class="free-Coures--Price"></span>
+                <div class="OFF--Percent">
+                    <span>۱۰۰٪</span>
+                </div>
+            </div>
+                </div>
+            </div>
+         </article>
+        
+<!-- -------------------------       Read More / Read Less      -------------  -->
+    <article class="arti8">
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <div class="accordion-text collapsed">
+
+                    <h3>با دوره‌های دارک لرن برنامه‌نویس حرفه‌ای شوید!</h3>
+                    <p>
+                        اگر در ابتدای مسیر یادگیری برنامه‌نویسی قرار دارید
+                         یا بعد از چند سال فعالیت حرفه‌ای به‌عنوان برنامه‌نویس به‌دنبال فتح قله‌های جدید در این حوزه هستید، دوره‌های دارک لرن شما را به هدفتان می‌رسانند. در این آکادمی همه چیز برای یادگیری
+                         برنامه‌نویسی از صفر یا دریافت آموزش‌های تکمیلی برای تبدیل شدن به یک برنامه‌نویس کاربلد مهیا است. در دارک لرن دوره‌های آموزشی متنوع با کمترین هزینه و پشتیبانی مستمر آماده شده 
+                        تا بدون نیاز به کتاب یا دوره دیگر، بتوانید صفر تا صد برنامه‌نویسی را یاد بگیرید. تجربه‌های دانشجویان قبلی نشان می‌دهد که سبک تدریس اساتید مجرب دارک لرن نه تنها آموزش‌های
+                         استاندارد را با پروژه‌های واقعی ترکیب می‌کند، بلکه به دانشجویان انگیزه و اعتمادبه‌نفس لازم برای ادامه مسیر برنامه‌نویسی را می‌دهد. دارک لرن با تمرکز بر آموزش‌های منطبق با 
+                        نیازهای بازار کار ایران و استفاده از روش‌های تدریس بومی‌سازی‌شده، تضمین می‌کند که نه تنها مطالب به‌روز و حرفه‌ای را یاد بگیرید، بلکه با آمادگی کامل وارد بازار کار شوید.
+                    </p>
+                    <h3>آموزش برنامه نویسی به سبکی منحصربه فرد</h3>
+                    <p>
+                        شمایی که وارد این صفحه شدید، احتمالا قبلا با چند مرکز آموزش دوره برنامه نویسی آشنا شده و احتمالا بعد از این هم به تحقیقتون ادامه میدید. اما حالا که مهمان 
+                        دارک لرن شدید، بد نیست در جریان چکیده ای از تجربیات و ذهنیت دارک لرن در آموزش کدنویسی رو هم قرار بگیرید تا به تصمیم گیری نهایی شما کمک کنه. حس سردرگمی و تردید در انتخاب منبع آموزشی و گاهی مسیر یادگیری
+                         برنامه نویسی تقریبا بین همه علاقمندان این تخصص جذاب مشترک بوده چون تا دلتون بخواد شعار آموزش برنامه نویسی از صفر و آموزش برنامه نویسی رایگان و ... سراسر وب رو پر کرده اما وقتی شروع به آموزش دیدن
+                         می کنید، می بینید که یا مدرس مسلط نیست، یا مسیر آموزشی شفاف و استاندارد نیست و یا سبک و لحن تدریس و ارائه تمرینات طوری نیست که بتونید به راحتی باهاش ارتباط بگیرید و در کوتاه مدت به عمل برسونید.
+                         شاید براتون جالب باشه که بعضی از دانشجوهای دارک لرن گفتن که قبل از گذروندن دوره های آموزش برنامه نویسی دارک لرن، به واسطه دوره های غیر استاندارد گذشته تصمیم گرفته بودن کلا از دنیای برنامه نویسی
+                         خداحافظی کنن و احساس میکردن استعداد این رشته رو ندارن اما وقتی با سبک و استراتژی آموزشی دارک لرن در آموزش برنامه نویسی از صفر  آشنا شدن، اتفاقا علاقه و انگیزه شون برای ادامه این مسیر
+                         دوست داشتنی و پولساز بیشتر هم شد و اعتماد به نفس فوق‌العاده ای پیدا کردن. بنابراین چه اول راه یادگیری برنامه نویسی باشید و چه در حال توسعه مهارت های خودتون، منبع آموزشی به
+                         روز و حرفه ای مثل دارک لرن به تنهایی میتونه تمام انتظارات و نیازهای شمارو پوشش بده. خب هر ادعایی سند و مدرک هم میخواد پس بیاید یه دور دلایل این ادعا رو باهم بررسی کنیم
+
+                    </p>
+                    <h3>۱. آموزش برنامه نویسی رایگان</h3>
+                    <p>
+                        دارک لرن اعتقاد داره ورود هر علاقه مندی به دنیای
+                         آموزش کدنویسی باید بدون ریسک باشه و هیچ دغدغه ای جز تمرکز روی یادگیری در ذهن اون فرد نباشه. به همین دلیل 
+                        می بینید که در طرح آموزش برنامه نویسی رایگان دارک لرن، تمام زبان ها و تکنولوژی های اصلی مثل جاوا اسکریپت، پایتون،
+                         CSS ، HTML و چندین دوره دیگه به صورت رایگان و همراه با پشتیبانی مادام العمر آموزش داده میشه که همه اونها در دسته آموزش صفر تا صد
+                          برنامه نویسی هم هستن و برخلاف دیگران، به بهانه رایگان بودن چیزی از کیفیت و حجم محتوای دوره ها کم نشده!
+                    </p>
+                    <h3>۲.آموزش کدنویسی بدون ریسک</h3>
+                    <p>
+                        با توجه به مورد قبلی، کاملا واضحه که نگرش دارک لرن، دریافت هزینه آموزش برنامه نویسی از کسانی هست که مسیر قطعی خودشون رو پیدا کردن و قصد توسعه مهارت ها و تکنیک های خودشون رو دارن نه همه! دومین نکته اینه که شما با گذروندن یا دیدن چند جلسه از دوره های رایگان با سبک و کیفیت محتوای دوره برنامه نویسی دارک لرن آشنا میشید و به این ترتیب ریسک شما برای پرداخت هزینه آموزش های بعدی صفر خواهد بود.
+                    </p>
+
+                    <h3>۳.آموزش صفر تا صد برنامه نویسی واقعی!</h3>
+                    <p>
+                        همونطور که میدونید سرفصل های هر تخصص برنامه نویسی به صورت بین المللی تدوین شده اما گاهی برای ایرانی ها به دلیل محدودیت ها و مسائل تکنیکی کدنویسی، این سرفصل ها باید بومی سازی شده و با مثال ها و پروژه های ایرانی تدریس بشن تا دانشجو در فضای بازار کار قرار بگیره. فرآیند بومی سازی هم نیاز به مطالعه و تسلط خیلی زیادی داره که در عین حفظ ساختار کامل دوره برنامه نویسی، اون رو به محتوایی منطبق بر نیاز دانشجوهای ایرانی، روان‌تر و عملی‌تر تبدیل کنه. بنابراین در دارک لرن قرار نیست کتابی و خشک این مهارت جذاب رو یاد بگیرید.
+
+                    </p>
+
+                    <h3>۴.دوره برنامه نویسی با تضمین نقد</h3>
+                    <p>
+                        ضمانت ها معمولا بعد از فروش ارائه میشن اما دارک لرن به عنوان ضمانت پیش‌دستانه، 20 الی 40 درصد همه دوره های پولی رو هم به رایگان در اختیار علاقه‌مندان گذاشته تا دیگه هیچ حرف و حدیث و اصطلاحا هندونه دربسته‌ای در کار نباشه و خیلی راحت تصمیمشون برای انتخاب بهترین منبع آموزش برنامه نویسی رو بگیرن.
+                    </p>
+
+                    <h3>۵.آموزش برنامه نویسی از صفر با همراهی پشتیبان مسلط</h3>
+                    <p>
+                        نکته مهم بعدی اینه که دارک لرن اعتقاد داره ارائه آموزش برنامه نویسی به تنهایی، لزوما به معنی تربیت یک برنامه نویس حرفه ای نیست و حتما نیاز داره که پشتیبانان فنی مسلط و آشنا به شرایط بازار کار هر رشته قدم به قدم در کنار دانشجو باشن تا از لحظه شروع دوره برنامه نویسی تا تدوین رزومه، جلسه مصاحبه استخدام و چالش های بعد از استخدام همراهی لازم و دلسوزانه رو داشته باشن.
+                    </p>
+                    <h3>۶.یادگیری برنامه نویسی با چشم باز</h3>
+                    <p>
+                        آخرین نکته هم توصیه ما به مطالعه کامنت دانشجوهای قبلی دارک لرن هست که در صفحه هر دوره آموزش برنامه نویسی میتونید مطالعه کنید و بر اساس برآیند کلی نظرات، درصد رضایت رو محاسبه کنید.
+
+                    </p>
+                </div>
+              <button class="toggle-btn">مشاهده بیشتر</button>   
+            </div>
+          
+            
+          
+            <!-- می‌تونی به همین شکل آیتم‌های بیشتری اضافه کنی -->
+          </div>
+            
+
+    </article>
+
+
+    </main>
+    <footer class="footerHome">
+        <div class="hedFooter">
+            <div class="LOGO_and_SOsyal">
+                <div class="logo-and-name">
+                    <img src="/image/Group 2.png" alt="Dark Learn">
+                    <span class="footer-site-name">دارک لرن</span>
+                </div>
+                <div class="sooyalDIV">
+                    <i class="fa-brands fa-telegram"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+            <div class="contentSIte">
+                <div>
+                    <a href="#"><i class="fa-solid fa-phone"></i>09121001212 </a>
+                </div>
+                <div>
+                    <a href="#"><i class="fa-solid fa-envelope"></i>info@darklearn.ir</a>
+                </div>
+                <div>
+                    <a href="#"><i class="fa-brands fa-telegram"></i> @darklearn_support </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer2Content">
+            <div style="width: 430px;">
+                <span style="font-size: 22px; font-weight: 800; color: var(--Font1-color);margin-right: 10px; position: relative;top: 50px;">درباره دارک لرن</span><br>
+                <span style="color: var(--Font3--color); position: relative; top: 70px; right: 10px;">شروع هرچیزی سخته، ولی وقتی مسیر درستی رو انتخاب کنی،با خیال راحت و بدون استرس میتونی از مسیر لذت ببری. ما در دارک لرن، توی سفر به دنیای برنامه نویسی کنارت هستیم تا باهم رشد کنیم و از نتیجه زحمات مون لذت ببریم.</span>
+            </div>
+            <div>
+                <span style="color: var(--Font1-color); font-size: 22px; font-weight: 800; margin-right: 120px; position: relative; top: 50px;">دوره های پرطرفدار</span>
+                <a style="display: block; margin-top: 20px; font-size: 18px; color: var(--Font3--color); text-decoration: none; position: relative; top: 50px; right: 120px;" href="#">آموزش پایتون</a>
+                <a style="display: block; margin-top: 20px; font-size: 18px; color: var(--Font3--color); text-decoration: none; position: relative; top: 50px; right: 120px;" href="#">دوره طراحی قالب حرفه ای</a>
+                <a style="display: block; margin-top: 20px; font-size: 18px; color: var(--Font3--color); text-decoration: none; position: relative; top: 50px; right: 120px;" href="#">آموزش BootStrap</a>
+                <a style="display: block; margin-top: 20px; font-size: 18px; color: var(--Font3--color); text-decoration: none; position: relative; top: 50px; right: 120px;" href="#">مستر فریلنس</a>
+            </div>
+            <div>
+                <span style="color: var(--Font1-color); font-size: 22px; font-weight: 800; margin-right: 70px; position: relative; top: 50px;">دسترسی سریع</span>
+            <a style="display: block; margin-top: 20px; font-size: 18px; color: var(--Font3--color); text-decoration: none; position: relative; top: 50px; right: 70px;" href="#">قوانین و مقررات</a>
+            <a style="display: block; margin-top: 20px; font-size: 18px; color: var(--Font3--color); text-decoration: none; position: relative; top: 50px; right: 70px;" href="#">ارسال تیکت</a>
+            <a style="display: block; margin-top: 20px; font-size: 18px; color: var(--Font3--color); text-decoration: none; position: relative; top: 50px; right: 70px;" href="#">همه دوره ها</a>
+            </div>
+            <div></div>
+        </div>
+    </footer>
+    <script src="/page/home-page/js/script.js"></script>
+    <script src="/darkMod-Color/Script.js"></script>
+    <!-- <script src="/page/Course-information/course-data.js"></script> -->
+    <script src="/prudact-basket/basket.js"></script>
+    <script src="/searchBoxCode/searchbox.js"></script>
+
+    <script>
+        Basket.init();
+    </script>
+</body>
+</html>
+

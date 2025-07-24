@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All COURSE</title>
+    <link rel="stylesheet" href="/page/Course-information/course.css" />
+    <link rel="stylesheet" href="/page/AllCourse/AllCourse.css" />
+    <link rel="stylesheet" href="/page/home-page/css/style.css" />
+    <link rel="stylesheet" href="/darkMod-Color/Style.css" />
+    <link rel="stylesheet" href="/fontawesome-free-6.7.2-web/css/all.css" />
+    <script src="/page/acourseAbject.js"></script>
+  </head>
+
+  <body class="Corse_page-body">
+     <!-- وقتی سبد خرید کلیک میشه کل صفحه تار میشه -->
+
+     <div id="overlay" class="overlay"></div>
+
+     <div class="basket-product-container">
+       <i id="backetIcon" class="fa-solid fa-bag-shopping Hed--icone sabad"></i>
+       <!-- <i id="backetIcon" class="fa-solid fa-bag-shopping"></i> -->
+       <div class="prudact-box" id="icone-shope">
+         <!-- باکس اول سبد خرید\ -->
+         <div class="oneBasketBox">
+           <span>سبد خرید من</span>
+           <div>
+             <span id="basketItemCount">۰</span>
+             <span>دوره</span>
+           </div>
+         </div>
+         <!-- باکس نشان دادن دوره های که کاربر قصد خرید داشته -->
+         <div class="prudakt-buy-user" id="basketBox"></div>
+         <!-- باکس محاسبه هزینه تمام دوره ها و دکمه پرداخت -->
+         <div class="prudact-ent-Box">
+           <div class="total-price-style">
+             <span>مبلغ قابل پرداخت:</span>
+             <span id="totalPrice"></span>
+           </div>
+           <div>
+             <button class="buy--allPrice-prudact">پرداخت</button>
+           </div>
+         </div>
+       </div>
+     </div>
+ 
+     <!-- -------------------------------------------- -->
+    <header class="course--header">
+      <div class="Menu--Bar cc-oo">
+        <a  href="/page/home.html">
+          <img class="logo"  src="/image/Group 2.png" />
+        </a>
+        <ul class="menu" style="top: 0px">
+          <!-- <li>دوره های آموزشی</li> -->
+          <a href="/page/home.html">
+            <li>صفحه اصلی</li>
+          </a>
+          <!-- <li>مقالات</li> -->
+        </ul>
+        <div class="serche--course" style="position: relative; top: -4px; right: 170px;">
+          <input
+            id="searchInput"
+            class="SR--COUR"
+            type="search"
+            placeholder="جستوجو در بین دوره ها ..."
+          />
+          <div class="search-box-course" id="results"></div>
+          <div class="serch-icon">
+            <i class="fa-solid fa-magnifying-glass sr-box-icone"></i>
+          </div>
+        </div>
+        <div class="Just-Go-To-Top_icone">
+          <i id="toggle-theme" class="fa-solid fa-moon Hed--icone mah"></i>
+        </div>
+        </div>
+        <a class="link-To-Go-Login" href="/page/singin-login-page/LOGIN/login.html"
+          ><button style="margin-left: 28px;" class="login-btn" >
+            <i class="fa-regular fa-user"></i>ورود | عضویت
+          </button></a
+        >
+      </div>
+    </header>
+    <main class="main-size">
+      <div id="category-filter">
+        <div class="box1">
+          <i class="fa-solid fa-list"></i><span style="margin-right: 5px;">دسته بندی</span>
+        </div>
+
+        <div class="box2">
+          <label class="custom-checkbox">
+            <input
+              type="radio"
+              name="category"
+              data-category="all"
+              value="همه"
+            />
+            <span class="checkmark"></span>
+            همه دوره ها
+          </label>
+          <label class="custom-checkbox">
+            <input
+              type="radio"
+              name="category"
+              data-category="frontend"
+              value="فرانت اند"
+            />
+            <span class="checkmark"></span>
+            فرانت اند
+          </label>
+          <label class="custom-checkbox">
+            <input
+              type="radio"
+              name="category"
+              data-category="upgrate"
+              value="ارتقای مهارت ها"
+            />
+            <span class="checkmark"></span>
+            ارتقای مهارت ها
+          </label>
+          <label class="custom-checkbox">
+            <input
+              type="radio"
+              name="category"
+              data-category="backend"
+              value="بک اند"
+            />
+            <span class="checkmark"></span>
+            بک اند
+          </label>
+          <label class="custom-checkbox">
+            <input
+              type="radio"
+              name="category"
+              data-category="security"
+              value="امنیت"
+            />
+            <span class="checkmark"></span>
+            امنیت
+          </label>
+          <label class="custom-checkbox">
+            <input
+              type="radio"
+              name="category"
+              data-category="python"
+              value="پایتون"
+            />
+            <span class="checkmark"></span>
+            پایتون
+          </label>
+          <label class="custom-checkbox">
+            <input
+              type="radio"
+              name="category"
+              data-category="sowtware"
+              value="مهارت های نرم"
+            />
+            <span class="checkmark"></span>
+            مهارت های نرم
+          </label>
+          <label class="custom-checkbox">
+            <input
+              type="radio"
+              name="category"
+              data-category="php"
+              value="پی اچ پی"
+            />
+            <span class="checkmark"></span>
+            پی اچ پی
+          </label>
+        </div>
+
+        <!-- <button data-category="all">همه</button>
+          <button data-category="frontend">فرانت‌اند</button>
+          <button data-category="backend">بک‌اند</button> -->
+      </div>
+    </main>
+
+    <div
+      style="
+        top: 98px;
+        height: auto;
+        width: 75%;
+        transform: translateX(-323px);
+        position: relative;
+      "
+      class="accordion-item"
+    >
+      <div class="accordion-box collapsed">
+        <div class="container" id="course-list"></div>
+      </div>
+      <button style="top: -40px" class="load-more">مشاهده بیشتر</button>
+    </div>
+
+    <footer class="all-course-footer">
+      <div class="hedFooter">
+        <div class="LOGO_and_SOsyal">
+          <div class="logo-and-name">
+            <img class="fotter-logo" src="/image/Group 2.png" alt="Dark Learn" />
+            <span class="footer-site-name">دارک لرن</span>
+          </div>
+          <div class="sooyalDIV">
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+          </div>
+        </div>
+        <div class="contentSIte">
+          <div>
+            <a href="#"><i class="fa-solid fa-phone"></i>09121001212 </a>
+          </div>
+          <div>
+            <a href="#"
+              ><i class="fa-solid fa-envelope"></i>info@darklearn.ir</a
+            >
+          </div>
+          <div>
+            <a href="#"
+              ><i class="fa-brands fa-telegram"></i> @darklearn_support
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer2Content">
+        <div style="width: 430px">
+          <span class="darklearn-about-title">درباره دارک لرن</span
+          ><br />
+          <span class="about-darklearn">شروع هرچیزی سخته، ولی وقتی مسیر درستی رو انتخاب کنی،با خیال راحت و
+            بدون استرس میتونی از مسیر لذت ببری. ما در دارک لرن، توی سفر به دنیای
+            برنامه نویسی کنارت هستیم تا باهم رشد کنیم و از نتیجه زحمات مون لذت
+            ببریم.</span
+          >
+        </div>
+        <div>
+          <span class="dorehay-por-tarafdar">دوره های پرطرفدار</span>
+          <a href="#" class="portarfdar-cldrin">آموزش پایتون</a>
+          <a href="#" class="portarfdar-cldrin">دوره طراحی قالب حرفه ای</a>
+          <a href="#" class="portarfdar-cldrin">آموزش BootStrap</a>
+          <a href="#" class="portarfdar-cldrin">مستر فریلنس</a>
+        </div>
+        <div>
+          <span class="fast-mazhol">دسترسی سریع</span>
+          <a class="fast-mazhol-child" href="#">قوانین و مقررات</a>
+          <a class="fast-mazhol-child" href="#">ارسال تیکت</a>
+          <a class="fast-mazhol-child" href="#">همه دوره ها</a>
+        </div>
+        <div></div>
+      </div>
+    </footer>
+
+    <script src="/darkMod-Color/Script.js"></script>
+    <script src="/page/AllCourse/AllCourse.js"></script>
+    <!-- <script src="/page/home-page/js/script.js"></script> -->
+     <script src="/prudact-basket/basket.js"></script>
+     <script src="/searchBoxCode/searchbox.js"></script>
+     <script>
+      Basket.init();
+  </script>
+  </body>
+</html>

@@ -1,0 +1,748 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* برای پلتفرم تلفن همراه */
+@media (max-width: 768px){
+  
+  /* category-filter */
+  #category-filter{
+    font-size: 12px;
+    width: 98%;
+    height: 80px;
+    /* background-color: var(--Box--color); */
+    background-color: #1EB35B;
+    position: absolute;
+    top: 85px;
+    /* right: 15px; */
+    margin: 0 0.2rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-hard);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+
+  }
+.serche--course{
+  display: none;
+}
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  list-style: none;
+  background: var(--Glass-bg--menu);
+  backdrop-filter: var(--blur-effect);
+  border: var(--glass-border);
+  border-radius: var(--card-radius);
+  position: relative;
+  right: -60px;
+  height: 30px;
+  width: 55%;
+
+}
+.menu li {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #fff;
+  transition: .3s;
+}
+.course--header {
+  height: 130px;
+}
+/* باکس هدر سایت */
+.Menu--Bar {
+        background: var(--glass-bg);
+        /* background-color: #0d6efd; */
+        backdrop-filter: var(--blur-effect);
+        border: var(--glass-border);
+        border-radius: var(--card-radius);
+        padding: 1rem;
+        height: 60px;
+        margin: 0.3rem 0.2rem;
+        box-shadow: var(--shadow-medium);
+        position: relative;
+        top: 8px;
+        /* width: 100%; */
+        
+    }
+    /* لوگوی سایت */
+    .logo {
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      width: 40px;
+      height: 40px;
+      display: none;
+  }
+  /* دکمه ورود و عضویت */
+  .login-btn {
+    font-size: 12px;
+    background-color: #1EB35B;
+    color: white;
+    padding: 5px 11px;
+    /* margin: 16px 15px 16px 15px; */
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    font-family: 'Yekan';
+    float: left;
+    position: relative;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    position: absolute;
+    top: 14px;
+    /* left: 20px; */
+    z-index: 20;
+}
+.login-btn{
+  font-size: 12px;
+}
+.link-To-Go-Login{
+  position: absolute;
+  border-radius: 12px;
+  width: 98px;
+  height: 50px;
+  /* background-color: #0d6efd; */
+  top: 14px;
+  left: 12px;
+}
+  /* استایل موقعیت دکمه دارک مد */
+  .Just-Go-To-Top_icone{
+    position: relative;
+    left: 75px;
+    top: -28px;
+  }
+  /* استایل دکمه سبد خرید */
+  .basket-product-container{
+    left: 125px;
+    top: 0px;
+  }
+  /* باکس تمام دوره ها  */
+  .container{
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    right: -295px;
+    top: -70px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+
+  /* عکس دوره ها  */
+  .dore img {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    right: 13px;
+    image-rendering: auto;
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+    border-radius: 11px;
+  }
+  .dore {
+    background-color: var(--Box--color);
+    width: 290px;
+    height: 400px;
+    margin-right: 8px;
+    /* gap: 20px; */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 9px 4px var(--BoxSadow-color);
+    transition: .3s;
+    cursor: pointer;
+  }
+  .boxCursName {
+    /* background-color: var(--Box--color); */
+    width: 290px;
+    height: 130px;
+    position: relative;
+  }
+  .cours_name {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--Font1-color);
+    position: relative;
+    right: 6%;
+    top: 5%;
+    text-align: right;
+    width: 250px;
+    height: 15px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+.abut_curs {
+  color: var(--Font2--color);
+  font-size: 14px;
+  text-align: right;
+  display: inline-block;
+  position: relative;
+  right: 6%;
+  top: 8%;
+  width: 250px;
+}
+.adminName {
+  width: 290px;
+  height: 40px;
+  background-color: var(--Box--color);
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px 0 20px;
+  align-items: center;
+  top: 4%;
+  z-index: 1;
+}
+.phoneModal{
+  position: relative;
+  left: 155px;
+}
+.phoneModalgrup{
+  position: relative;
+  top: 33px;
+  right: -5px;
+}
+.phoneStars{
+  position: relative;
+  left: 10px;
+  top: 1px;
+}
+.adminInfo {
+  color: var(--Font3--color);
+  font-size: 14px;
+  font-weight: 300;
+  width: 100px;
+}
+.emtyaz {
+  display: flex
+;
+  justify-content: space-between;
+  position: relative;
+  left: -10%;
+  width: 30px;
+  color: #F59E0B;
+}
+.addEmtyaz {
+  font-size: 14px;
+  transform: translate(16px, 0px);
+  font-weight: 400;
+}
+.boxCursPrise {
+  background-color: var(--Box--color);
+  width: 290px;
+  height: 90px;
+  padding: 0 20px 0 20px;
+  /* display: block; */
+  /* position: relative; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+.studentsBuyCurss {
+  position: relative;
+  top: 39%;
+  right: 0%;
+  font-size: 16px;
+  color: var(--Font2--color);
+  font-weight: 200;
+}
+.price {
+  font-size: 18px;
+  color: #1EB35B;
+  float: left;
+  transform: translateY(35px);
+  font-weight: 600;
+}
+.load-more {
+  margin-top: 10px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  color: #1EB35B;
+  border: 1px solid #1EB35B;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  left: 65%;
+  top: 89px;
+  font-weight: 100;
+  font-family: 'Yekan';
+  font-size: 16px;
+  background-color: var(--BodyBackground--Color);
+  /* background-color: red; */
+  transition: .3s;
+}
+.load-more:hover{
+  border-color: var(--Font1-color);
+  color: var(--Font1-color);
+}
+.all-course-footer {
+  background-color: var(--Box--color);
+  width: 100%;
+  height: 300px;
+  margin-top: 50px;
+}
+.hedFooter {
+  width: 100%;
+  height: 70px;
+  /* background-color: red; */
+  position: relative;
+  top: 40px;
+}
+.LOGO_and_SOsyal {
+  display: flex;
+  position: relative;
+  top: -30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.logo-and-name {
+  width: 250px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: rgb(206, 206, 34); */
+}
+.footer-site-name {
+  font-size: 26px;
+  margin-right: 30px;
+  font-weight: 900;
+  color: var(--Font1-color);
+}
+.contentSIte {
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  top: -70px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  /* background-color: blueviolet; */
+}
+.contentSIte div a {
+  color: var(--Font3--color);
+  text-decoration: none;
+  padding-right: 15px;
+}
+.footer2Content {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  position: relative;
+  top: 45px;
+}
+
+.footer2Content div {
+  width: 25%;
+  height: 200px;
+  /* background-color: var(--BodyBackground--Color); */
+  /* border: 1px solid #000; */
+}
+
+  /* گزینه های فوتر */
+  .dorehay-por-tarafdar{
+    color: var(--Font1-color);
+    font-size: 22px;
+    font-weight: 800;
+    margin-right: 120px;
+    position: relative;
+    top: 50px;
+  }
+  /* چلدرن های فوتر */
+  .portarfdar-cldrin{
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--Font3--color);
+    text-decoration: none;
+    position: relative;
+    top: 50px;
+    right: 120px;
+  }
+  /* بخش دسترسی سریع */
+  .fast-mazhol{
+    
+      color: var(--Font1-color);
+      font-size: 22px;
+      font-weight: 800;
+      margin-right: 70px;
+      position: relative;
+      top: 50px;
+  
+  }
+  .fast-mazhol-child{
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--Font3--color);
+    text-decoration: none;
+    position: relative;
+    top: 50px;
+    right: 70px;
+  }
+  .fotter-logo{
+    width: 60px;
+    height: 60px;
+  }
+  .footer-site-name{
+    position: relative;
+    right: -100px;
+  }
+  .hedFooter::after {
+    content: '';
+    width: 99%;
+    height: 1px;
+    background-color: rgb(84, 84, 84);
+    position: absolute;
+    left: 5px;
+    bottom: -15px;
+    border-radius: 30px;
+}
+.darklearn-about-title{
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--Font1-color);
+  margin-right: 10px;
+  position: relative;
+  top: 10px;
+}
+.about-darklearn{
+  color: var(--Font3--color);
+  position: relative;
+  top: 8px;
+  right: 10px;
+  font-size: 10px;
+}
+ /* گزینه های فوتر */
+ .dorehay-por-tarafdar{
+  color: var(--Font1-color);
+  font-size: 12px;
+  font-weight: 800;
+  margin-right: 30px;
+  position: relative;
+  top: 50px;
+  display: block;
+  width: 100px;
+}
+.portarfdar-cldrin{
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  color: var(--Font3--color);
+  text-decoration: none;
+  position: relative;
+  top: 50px;
+  right: 30px;
+}
+ /* بخش دسترسی سریع */
+ .fast-mazhol{
+  color: var(--Font1-color);
+  font-size: 12px;
+  font-weight: 800;
+  margin-right: 40px;
+  position: relative;
+  top: 50px;
+  width: 100px;
+  display: block;
+}
+.fast-mazhol-child{
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  color: var(--Font3--color);
+  text-decoration: none;
+  position: relative;
+  top: 50px;
+  right: 40px;
+}
+}
+
+/* برای پلتفرم لپ تاپ */
+@media (min-width: 1090px) and (max-width: 1440px){
+
+  /* گزینه های فوتر */
+  .dorehay-por-tarafdar{
+    color: var(--Font1-color);
+    font-size: 22px;
+    font-weight: 800;
+    margin-right: 120px;
+    position: relative;
+    top: 50px;
+  }
+  /* چلدرن های فوتر */
+  .portarfdar-cldrin{
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--Font3--color);
+    text-decoration: none;
+    position: relative;
+    top: 50px;
+    right: 120px;
+  }
+  /* بخش دسترسی سریع */
+  .fast-mazhol{
+      color: var(--Font1-color);
+      font-size: 22px;
+      font-weight: 800;
+      margin-right: 70px;
+      position: relative;
+      top: 50px;
+  }
+  
+  .about-darklearn{
+    color: var(--Font3--color);
+    position: relative;
+    top: 70px;
+    right: 10px;
+  }
+  .darklearn-about-title{
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--Font1-color);
+    margin-right: 10px;
+    position: relative;
+    top: 50px;
+  }
+  .fast-mazhol-child{
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--Font3--color);
+    text-decoration: none;
+    position: relative;
+    top: 50px;
+    right: 70px;
+  }
+   /* استایل دکمه سبد خرید */
+   .basket-product-container{
+      left: 234px;
+      top: 12px;
+   }
+
+  /* .login-btn {
+    font-size: 12px;
+    background-color: #1EB35B;
+    color: white;
+    padding: 5px 11px;
+    margin: 16px 15px 16px 28px;
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    font-family: 'Yekan';
+    float: left;
+    position: relative;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    position: absolute;
+    z-index: 20;
+} */
+
+  .link-To-Go-Login{
+    position: absolute;
+    border-radius: 12px;
+    width: 238px;
+    height: 50px;
+    /* background-color: #0d6efd; */
+    top: 16px;
+    left: 12px;
+  }
+  /* استایل موقعیت دکمه دارک مد */
+  .Just-Go-To-Top_icone{
+    position: relative;
+    left: 149px;
+    top: -31px;
+  }
+
+/* category-filter */
+  #category-filter{
+  width: 25%;
+  height: 475px;
+  background-color: var(--Box--color);
+  /* background-color: #0d6efd; */
+  position: absolute;
+  right: 15px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-hard);
+
+}
+
+
+.main-size{
+  position: relative;
+  top: 100px;
+  }
+    
+  .load-more {
+    margin-top: 10px;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    color: #1EB35B;
+    border: 1px solid #1EB35B;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    left: -45%;
+    top: 89px;
+    font-weight: 100;
+    font-family: 'Yekan';
+    font-size: 16px;
+    background-color: var(--BodyBackground--Color);
+    transition: .3s;
+  }
+  .load-more:hover{
+    border-color: var(--Font1-color);
+    color: var(--Font1-color);
+  }
+  .accordion-box {
+    overflow: hidden;
+    max-height: 230px;
+    position: relative;
+    top: 50px;
+    transition: max-height 0.4s ease;
+    line-height: 1.6;
+    /* background-color: #1EB35B; */
+    height: 3000px;
+  }
+  .accordion-box {
+    overflow: hidden;
+    max-height: 920px;
+    background-color: transparent;
+    position: relative;
+    top: -35px;
+    transition: max-height 0.4s ease;
+    line-height: 1.6;
+    height: 6000px;
+    background-color: transparent;
+  }
+  
+  .accordion-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    height: 57.5em;
+    width: 100%;
+    /* background: linear-gradient(to top, var(--BodyBackground--Color), transparent); */
+    display: block;
+  }
+  
+  .accordion-box.expanded {
+    max-height: 8550px;
+  
+  }
+  
+  .accordion-box.collapsed::after {
+    display: block;
+  }
+  
+  .accordion-box.expanded::after {
+    display: none;
+  }
+  
+  
+  .box1{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    position: relative;
+    color: var(--Font1-color);
+    font-size: 22px;
+  }
+  .box1::before{
+    content: '';
+    width: 90%;
+    height: 1px;
+    background-color: #e3e3e3;
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+    border-radius: 10px;
+  }
+  .box2{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: var(--Font1-color);
+  }
+  .box2 label{
+    margin-right: 15px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+  }
+  /* پنهان کردن چک‌باکس واقعی */
+  .box2 label input{
+    display: none;
+  }
+  /* ظاهر سفارشی برای span (چک‌باکس جایگزین) */
+  .custom-checkbox .checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: #e3e3e3;
+    border-radius: 4px;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+  .custom-checkbox input:checked + .checkmark {
+    background-color: var(--FontHover--color);
+    border-color: #0d6efd;
+  }
+  
+  
+  .custom-checkbox input:checked + .checkmark::after {
+    opacity: 1;
+  }
+  
+  /* course box/ */
+  
+  #course-list{
+    width: 100%;
+    height: 440px;
+    gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    position: relative;
+    top: 0px;
+    /* right: 4px; */
+  
+  }
+  .all-course-footer{
+    background-color: var(--Box--color);
+  
+    width: 100%;
+    height: 600px;
+    margin-top: 50px;
+  }
+
+ 
+
+}
